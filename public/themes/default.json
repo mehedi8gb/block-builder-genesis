@@ -25,16 +25,7 @@
           "heading": "About Our Platform",
           "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
           "align": "center",
-          "className": "py-12 px-4"
-        }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "ITS A NEW TEXT BLOCK",
-          "content": "WOW NICE",
-          "align": "center",
-          "className": "py-12 px-4"
+          "className": "text-lg text-gray-700 bg-gray-100 p-4 rounded-lg shadow-md"
         }
       }
     ],

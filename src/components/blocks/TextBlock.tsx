@@ -19,7 +19,6 @@ export const TextBlock: React.FC<TextBlockProps> = ({
     center: 'text-center',
     right: 'text-right',
   }[align];
-  console.log("classname", className);
 
   return (
     <section className={`py-12 px-4 ${className}`}>

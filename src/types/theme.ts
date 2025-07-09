@@ -4,6 +4,7 @@ import { z } from 'zod';
 // Block schema - represents a component with its props
 export const BlockSchema = z.object({
   block: z.string(),
+  child: z.record(z.any()).optional().default({}),
   props: z.record(z.any()).optional().default({}),
   id: z.string().optional(),
   className: z.string().optional(),

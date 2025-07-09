@@ -3,6 +3,8 @@ import { Hero } from '@/components/blocks/Hero';
 import { CategoryGrid } from '@/components/blocks/CategoryGrid';
 import { FooterLinks } from '@/components/blocks/FooterLinks';
 import { TextBlock } from '@/components/blocks/TextBlock';
+import { ProductList } from "@/components/blocks/ProductList";
+import {ProductCard} from "@/components/blocks/ProductCard";
 
 // Centralized registry of all available blocks
 export const BlockRegistry = {
@@ -10,6 +12,8 @@ export const BlockRegistry = {
   CategoryGrid,
   FooterLinks,
   TextBlock,
+  ProductList,
+  ProductCard,
 } as const;
 
 // Type for available block names

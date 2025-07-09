@@ -29,11 +29,10 @@ export function DynamicRenderer({ blocks, className = "" }: DynamicRendererProps
         }
 
         return (
-          <BlockComponent
-            key={block.id || index}
-            {...block.props}
-            className={block.className}
-          />
+            <BlockComponent
+                key={block.id || index}
+                {...block.props}
+                {...(block.child ? { child: block.child } : {})}></BlockComponent>
         );
       })}
     </div>
