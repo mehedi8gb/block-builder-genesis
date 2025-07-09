@@ -1,0 +1,66 @@
+
+{
+  "name": "E-commerce Theme",
+  "version": "1.0.0",
+  "layout": {
+    "home": [
+      {
+        "block": "Hero",
+        "props": {
+          "title": "Shop the Latest Trends",
+          "subtitle": "Discover amazing products at unbeatable prices",
+          "buttonText": "Shop Now"
+        }
+      },
+      {
+        "block": "CategoryGrid",
+        "props": {
+          "categories": ["Men's Fashion", "Women's Fashion", "Electronics", "Home & Garden"],
+          "columns": 4
+        }
+      }
+    ],
+    "product": [
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Product Details",
+          "content": "This would be a product page with dynamic content.",
+          "align": "left"
+        }
+      }
+    ],
+    "footer": [
+      {
+        "block": "FooterLinks",
+        "props": {
+          "links": [
+            { "title": "Shop", "url": "/shop" },
+            { "title": "My Account", "url": "/account" },
+            { "title": "Customer Service", "url": "/support" },
+            { "title": "Returns", "url": "/returns" }
+          ],
+          "copyright": "© 2024 E-commerce Platform. All rights reserved."
+        }
+      }
+    ]
+  },
+  "global": {
+    "colors": {
+      "primary": "#dc2626",
+      "secondary": "#16a34a",
+      "background": "#fafafa",
+      "text": "#111827",
+      "accent": "#ea580c"
+    },
+    "fonts": {
+      "base": "system-ui, sans-serif",
+      "heading": "Playfair Display, serif"
+    }
+  },
+  "metadata": {
+    "description": "E-commerce focused theme with product-centric layout",
+    "author": "E-commerce Team",
+    "created": "2024-07-09"
+  }
+}

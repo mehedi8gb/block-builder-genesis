@@ -1,73 +1,246 @@
-# Welcome to your Lovable project
+# Dynamic Theming Platform
 
-## Project info
+A testing environment for a Next.js-based platform that supports full dynamic theming through structured JSON configuration files.
 
-**URL**: https://lovable.dev/projects/5f8b9d5b-5b7e-4f3c-b4cd-265e41ead913
+## 🎯 Project Goals
 
-## How can I edit this code?
+- **Complete Layout Control**: Pages and sections are dynamically rendered based on `theme.json` files
+- **Component-Based Architecture**: Secure registry system with whitelisted components
+- **Global Design Tokens**: Colors, fonts, and spacing injected as CSS variables
+- **Type Safety**: Full TypeScript support with Zod schema validation
+- **Scalable Architecture**: Ready for remote theme loading and multi-tenancy
 
-There are several ways of editing your application.
+## 🏗️ Architecture Overview
 
-**Use Lovable**
+### File Structure
+```
+src/
+├── components/
+│   ├── blocks/           # Individual theme-able components
+│   │   ├── Hero.tsx
+│   │   ├── CategoryGrid.tsx
+│   │   ├── FooterLinks.tsx
+│   │   └── TextBlock.tsx
+│   ├── DynamicRenderer.tsx   # Renders blocks from theme config
+│   └── PageRenderer.tsx      # Complete page rendering
+├── contexts/
+│   └── ThemeContext.tsx      # Theme state management
+├── lib/
+│   ├── BlockRegistry.ts      # Secure component registry
+│   └── themeUtils.ts        # Theme utilities
+├── types/
+│   └── theme.ts             # TypeScript types & Zod schemas
+public/themes/               # Local theme storage
+├── default.json
+└── ecommerce.json
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5f8b9d5b-5b7e-4f3c-b4cd-265e41ead913) and start prompting.
+### Core Components
 
-Changes made via Lovable will be committed automatically to this repo.
+#### 1. Theme Configuration (`theme.json`)
+```json
+{
+  "name": "Theme Name",
+  "layout": {
+    "home": [
+      { 
+        "block": "Hero", 
+        "props": { "title": "Welcome" } 
+      }
+    ]
+  },
+  "global": {
+    "colors": { "primary": "#2563eb" },
+    "fonts": { "base": "Inter" }
+  }
+}
+```
 
-**Use your preferred IDE**
+#### 2. Block Registry System
+- **Security**: Only whitelisted components can be rendered
+- **Type Safety**: Full TypeScript support for all blocks
+- **Extensibility**: Easy to add new components
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### 3. Dynamic Renderer
+- Loops through layout configuration
+- Renders blocks with props from theme
+- Handles missing components gracefully
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+#### 4. Global Design Tokens
+- Colors, fonts, spacing injected as CSS variables
+- Accessible throughout the application
+- Overrides Tailwind defaults when needed
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd dynamic-theming-platform
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Creating a New Theme
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Create a new JSON file in `public/themes/`:
+```json
+{
+  "name": "My Custom Theme",
+  "layout": {
+    "home": [
+      {
+        "block": "Hero",
+        "props": {
+          "title": "Custom Hero Title",
+          "subtitle": "Custom subtitle"
+        }
+      }
+    ]
+  },
+  "global": {
+    "colors": {
+      "primary": "#your-color"
+    }
+  }
+}
+```
 
-**Use GitHub Codespaces**
+2. Load the theme:
+```tsx
+<ThemeProvider defaultTheme="my-custom-theme">
+  <PageRenderer page="home" />
+</ThemeProvider>
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Adding New Components
 
-## What technologies are used for this project?
+1. Create component in `src/components/blocks/`:
+```tsx
+interface MyBlockProps {
+  title?: string;
+  className?: string;
+}
 
-This project is built with:
+export const MyBlock: React.FC<MyBlockProps> = ({ title, className }) => {
+  return <div className={className}>{title}</div>;
+};
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. Register in `src/lib/BlockRegistry.ts`:
+```tsx
+import { MyBlock } from '@/components/blocks/MyBlock';
 
-## How can I deploy this project?
+export const BlockRegistry = {
+  // ... existing blocks
+  MyBlock,
+} as const;
+```
 
-Simply open [Lovable](https://lovable.dev/projects/5f8b9d5b-5b7e-4f3c-b4cd-265e41ead913) and click on Share -> Publish.
+3. Use in theme configuration:
+```json
+{
+  "block": "MyBlock",
+  "props": { "title": "Hello World" }
+}
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Advanced Features
 
-Yes, you can!
+### Theme Selection Strategies
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```tsx
+// Query parameter: ?theme=ecommerce
+const strategy: ThemeSelectionStrategy = {
+  type: 'query',
+  paramName: 'theme'
+};
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+// Subdomain: shop.domain.com -> ecommerce theme
+const strategy: ThemeSelectionStrategy = {
+  type: 'subdomain',
+  mapping: {
+    'shop': 'ecommerce',
+    'blog': 'content'
+  }
+};
+```
+
+### Remote Theme Loading (Future)
+
+```tsx
+// Will support loading from external APIs
+const theme = await fetchRemoteTheme('tenant-123');
+```
+
+### Theme Versioning (Future)
+
+```tsx
+// Compare theme versions
+const comparison = compareThemeVersions('1.0.0', '1.1.0');
+```
+
+## 🧪 Testing Themes
+
+The platform includes sample themes:
+
+- **default.json**: Basic platform theme
+- **ecommerce.json**: E-commerce focused layout
+
+Switch between themes by changing the `defaultTheme` prop:
+
+```tsx
+<ThemeProvider defaultTheme="ecommerce">
+  <PageRenderer page="home" />
+</ThemeProvider>
+```
+
+## 🔐 Security Features
+
+- **Component Whitelisting**: Only registered components can be rendered
+- **Schema Validation**: All themes validated with Zod schemas
+- **Type Safety**: Full TypeScript coverage prevents runtime errors
+- **Error Boundaries**: Graceful handling of missing/invalid components
+
+## 🚀 Future Roadmap
+
+- [ ] **Remote Theme Storage**: S3, Firebase, or database integration
+- [ ] **Admin Interface**: Visual theme editor and component library
+- [ ] **Multi-tenancy**: Tenant-specific theme management
+- [ ] **Theme Marketplace**: Share and discover themes
+- [ ] **Performance**: Theme caching and optimization
+- [ ] **Analytics**: Theme usage and performance metrics
+
+## 📝 Development Notes
+
+This is a **testing phase** focused on architecture validation. The system prioritizes:
+
+1. **Flexibility**: Complete layout control through JSON
+2. **Security**: Controlled component rendering
+3. **Developer Experience**: Type safety and clear error handling
+4. **Scalability**: Ready for production deployment
+
+Design aesthetics are intentionally minimal during this phase - the focus is on proving the dynamic theming architecture works reliably.
+
+## 🤝 Contributing
+
+When adding new features:
+
+1. Maintain type safety with TypeScript and Zod
+2. Update the BlockRegistry for new components
+3. Add comprehensive error handling
+4. Document new theme configuration options
+5. Test with multiple theme configurations
+
+## 📄 License
+
+This project is part of a larger production system and is intended for internal testing and development.
