@@ -7,14 +7,7 @@
       {
         "block": "Hero",
         "props": {
-          "title": "Welcome to Our Platform",
-          "subtitle": "Experience the power of dynamic theming",
-          "buttonText": "Get Started"
-        }
-      },  {
-        "block": "Hero",
-        "props": {
-          "title": "2nds to Our Platform",
+          "title": "Welcome to Our Platform DADA",
           "subtitle": "Experience the power of dynamic theming",
           "buttonText": "Get Started"
         }
@@ -23,7 +16,7 @@
         "block": "CategoryGrid",
         "props": {
           "categories": ["Technology", "Design", "Development", "Marketing"],
-          "columns": 1
+          "columns": 2
         }
       },
       {
@@ -31,7 +24,17 @@
         "props": {
           "heading": "About Our Platform",
           "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
-          "align": "center"
+          "align": "center",
+          "className": "py-12 px-4"
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "ITS A NEW TEXT BLOCK",
+          "content": "WOW NICE",
+          "align": "center",
+          "className": "py-12 px-4"
         }
       }
     ],
@@ -81,6 +84,14 @@
     ],
     "privacy": [
       {
+        "block": "Hero",
+        "props": {
+          "title": "About Our Platform",
+          "subtitle": "Building the future of dynamic web applications",
+          "buttonText": "Learn More"
+        }
+      },
+      {
         "block": "TextBlock",
         "props": {
           "heading": "Privacy Policy",
@@ -107,7 +118,7 @@
             { "title": "Contact", "url": "/contact" },
             { "title": "Privacy Policy", "url": "/privacy" }
           ],
-          "copyright": "© 2024 Dynamic Theme Platform. All rights reserved."
+          "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."
         }
       }
     ]

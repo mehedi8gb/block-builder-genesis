@@ -18,6 +18,14 @@
           "categories": ["Men's Fashion", "Women's Fashion", "Electronics", "Home & Garden"],
           "columns": 2
         }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Product Details",
+          "content": "This would be a product page with dynamic content.",
+          "align": "left"
+        }
       }
     ],
     "product": [
