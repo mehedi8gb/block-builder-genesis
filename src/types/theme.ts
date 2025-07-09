@@ -13,6 +13,8 @@ export const BlockSchema = z.object({
 export const LayoutSchema = z.object({
   home: z.array(BlockSchema).optional().default([]),
   about: z.array(BlockSchema).optional().default([]),
+  contact: z.array(BlockSchema).optional().default([]),
+  privacy: z.array(BlockSchema).optional().default([]),
   product: z.array(BlockSchema).optional().default([]),
   footer: z.array(BlockSchema).optional().default([]),
   header: z.array(BlockSchema).optional().default([]),

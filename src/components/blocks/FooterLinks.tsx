@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Link from 'next/link';
 
 interface FooterLinksProps {
   links?: Array<{ title: string; url: string }>;
@@ -21,13 +22,13 @@ export const FooterLinks: React.FC<FooterLinksProps> = ({
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center gap-8 mb-8">
           {links.map((link, index) => (
-            <a 
+            <Link 
               key={index}
               href={link.url}
               className="hover:text-blue-400 transition-colors font-base"
             >
               {link.title}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="text-center text-gray-400 font-base">
