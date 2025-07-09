@@ -10,7 +10,7 @@ interface FooterLinksProps {
 
 export const FooterLinks: React.FC<FooterLinksProps> = ({ 
   links = [
-    { title: "About", url: "/about" },
+    { title: "Index", url: "/about" },
     { title: "Contact", url: "/contact" },
     { title: "Privacy", url: "/privacy" }
   ],

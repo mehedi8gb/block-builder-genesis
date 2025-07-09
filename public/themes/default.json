@@ -11,12 +11,19 @@
           "subtitle": "Experience the power of dynamic theming",
           "buttonText": "Get Started"
         }
+      },  {
+        "block": "Hero",
+        "props": {
+          "title": "2nds to Our Platform",
+          "subtitle": "Experience the power of dynamic theming",
+          "buttonText": "Get Started"
+        }
       },
       {
         "block": "CategoryGrid",
         "props": {
           "categories": ["Technology", "Design", "Development", "Marketing"],
-          "columns": 2
+          "columns": 1
         }
       },
       {

@@ -16,7 +16,7 @@
         "block": "CategoryGrid",
         "props": {
           "categories": ["Men's Fashion", "Women's Fashion", "Electronics", "Home & Garden"],
-          "columns": 4
+          "columns": 2
         }
       }
     ],
