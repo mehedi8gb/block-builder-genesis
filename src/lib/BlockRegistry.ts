@@ -5,6 +5,9 @@ import { FooterLinks } from '@/components/blocks/FooterLinks';
 import { TextBlock } from '@/components/blocks/TextBlock';
 import { ProductList } from "@/components/blocks/ProductList";
 import {ProductCard} from "@/components/blocks/ProductCard";
+import { DashboardStats } from '@/components/blocks/DashboardStats';
+import { DataTable } from '@/components/blocks/DataTable';
+import { DashboardNav } from '@/components/blocks/DashboardNav';
 
 // Centralized registry of all available blocks
 export const BlockRegistry = {
@@ -14,6 +17,9 @@ export const BlockRegistry = {
   TextBlock,
   ProductList,
   ProductCard,
+  DashboardStats,
+  DataTable,
+  DashboardNav,
 } as const;
 
 // Type for available block names

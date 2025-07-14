@@ -172,8 +172,8 @@
       {
         "block": "Hero",
         "props": {
-          "title": "About Our Platform",
-          "subtitle": "Building the future of dynamic web applications",
+          "title": "Privacy Policy",
+          "subtitle": "Your privacy is important to us",
           "buttonText": "Learn More"
         }
       },
@@ -194,6 +194,178 @@
         }
       }
     ],
+    "client-dashboard": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Client Dashboard",
+          "userRole": "client"
+        }
+      },
+      {
+        "block": "DashboardStats",
+        "props": {
+          "title": "Your Account Overview",
+          "stats": [
+            { "label": "Active Projects", "value": "12", "change": "+2", "trend": "up" },
+            { "label": "Total Views", "value": "1,234", "change": "+15%", "trend": "up" },
+            { "label": "Storage Used", "value": "2.4 GB", "change": "0.2 GB", "trend": "up" },
+            { "label": "Plan Status", "value": "Pro", "trend": "neutral" }
+          ]
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Welcome Back!",
+          "content": "Here's an overview of your account activity and current projects. Use the navigation above to access different sections of your dashboard.",
+          "align": "left"
+        }
+      }
+    ],
+    "client-profile": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Client Profile",
+          "userRole": "client"
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Profile Information",
+          "content": "Manage your personal information and account preferences.",
+          "align": "left"
+        }
+      }
+    ],
+    "client-settings": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Client Settings",
+          "userRole": "client"
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Account Settings",
+          "content": "Configure your account preferences and notification settings.",
+          "align": "left"
+        }
+      }
+    ],
+    "admin-dashboard": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Admin Dashboard",
+          "userRole": "admin"
+        }
+      },
+      {
+        "block": "DashboardStats",
+        "props": {
+          "title": "System Overview",
+          "stats": [
+            { "label": "Total Users", "value": "2,456", "change": "+12%", "trend": "up" },
+            { "label": "Active Themes", "value": "18", "change": "+3", "trend": "up" },
+            { "label": "System Load", "value": "67%", "change": "-5%", "trend": "down" },
+            { "label": "Storage", "value": "1.2 TB", "change": "+0.1 TB", "trend": "up" }
+          ]
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Admin Portal",
+          "content": "Welcome to the administrative dashboard. Monitor system performance, manage users, and configure themes.",
+          "align": "left"
+        }
+      }
+    ],
+    "admin-users": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "User Management",
+          "userRole": "admin"
+        }
+      },
+      {
+        "block": "DataTable",
+        "props": {
+          "title": "All Users",
+          "headers": ["Name", "Email", "Role", "Status", "Created"],
+          "rows": [
+            { "name": "John Doe", "email": "john@example.com", "role": "Client", "status": "Active", "created": "2024-01-15" },
+            { "name": "Jane Smith", "email": "jane@example.com", "role": "Admin", "status": "Active", "created": "2024-01-10" },
+            { "name": "Bob Wilson", "email": "bob@example.com", "role": "Client", "status": "Inactive", "created": "2024-01-20" }
+          ],
+          "actions": [
+            { "label": "Edit" },
+            { "label": "Delete" }
+          ]
+        }
+      }
+    ],
+    "admin-themes": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Theme Management",
+          "userRole": "admin"
+        }
+      },
+      {
+        "block": "DataTable",
+        "props": {
+          "title": "Available Themes",
+          "headers": ["Name", "Version", "Status", "Created", "Author"],
+          "rows": [
+            { "name": "Default Theme", "version": "1.0.0", "status": "Active", "created": "2024-01-01", "author": "Platform Team" },
+            { "name": "E-commerce Theme", "version": "1.1.0", "status": "Active", "created": "2024-01-05", "author": "Design Team" },
+            { "name": "Dark Theme", "version": "0.9.0", "status": "Draft", "created": "2024-01-15", "author": "UI Team" }
+          ],
+          "actions": [
+            { "label": "Edit" },
+            { "label": "Clone" },
+            { "label": "Delete" }
+          ]
+        }
+      }
+    ],
+    "admin-analytics": [
+      {
+        "block": "DashboardNav",
+        "props": {
+          "title": "Analytics",
+          "userRole": "admin"
+        }
+      },
+      {
+        "block": "DashboardStats",
+        "props": {
+          "title": "Platform Analytics",
+          "stats": [
+            { "label": "Page Views", "value": "45,238", "change": "+18%", "trend": "up" },
+            { "label": "Unique Visitors", "value": "8,432", "change": "+12%", "trend": "up" },
+            { "label": "Bounce Rate", "value": "32%", "change": "-5%", "trend": "down" },
+            { "label": "Avg Session", "value": "4m 32s", "change": "+15s", "trend": "up" }
+          ]
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
+          "heading": "Platform Insights",
+          "content": "Monitor platform usage, user engagement, and performance metrics to optimize the system.",
+          "align": "left"
+        }
+      }
+    ],
     "footer": [
       {
         "block": "FooterLinks",
@@ -202,7 +374,9 @@
             { "title": "Home", "url": "/" },
             { "title": "About", "url": "/about" },
             { "title": "Contact", "url": "/contact" },
-            { "title": "Privacy Policy", "url": "/privacy" }
+            { "title": "Privacy Policy", "url": "/privacy" },
+            { "title": "Client Portal", "url": "/client/dashboard" },
+            { "title": "Admin Portal", "url": "/admin/dashboard" }
           ],
           "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."
         }
