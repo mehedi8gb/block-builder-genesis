@@ -3,7 +3,7 @@ import { PageRenderer } from '@/components/PageRenderer';
 
 export default function HomePage() {
   return (
-    <ThemeProvider defaultTheme="ecommerce">
+    <ThemeProvider defaultTheme="default">
       <PageRenderer page="home" />
     </ThemeProvider>
   );

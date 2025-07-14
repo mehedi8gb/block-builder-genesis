@@ -3,6 +3,20 @@
   "name": "Default Theme",
   "version": "1.0.0",
   "layout": {
+    "header": [
+      {
+        "block": "FooterLinks",
+        "props": {
+          "links": [
+            { "title": "Home", "url": "/" },
+            { "title": "About", "url": "/about" },
+            { "title": "Contact", "url": "/contact" },
+            { "title": "Privacy Policy", "url": "/privacy" }
+          ],
+          "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."
+        }
+      }
+    ],
     "home": [
       {
         "block": "Hero",
@@ -19,6 +33,87 @@
           "columns": 2
         }
       },
+
+      {
+        "block": "ProductList",
+        "child": {
+          "block": "ProductCard",
+          "className": "border rounded-lg p-4 hover:shadow-lg transition"
+        },
+        "props": {
+          "title": "Featured Products",
+          "columns": 4,
+          "products": [
+            {
+              "id": 1,
+              "name": "Classic Tee",
+              "price": "$25.00",
+              "image": "https://media.istockphoto.com/id/2185993729/photo/advertising-concepts-of-skin-care-cosmetics-with-cream-in-jar-serum-and-moisturizer.jpg?s=1024x1024&w=is&k=20&c=1wt7RsuX0juqTPBxd7dp0p-n5EPtRPhdGNUBUrsX1k0="
+            },
+            {
+              "id": 2,
+              "name": "Leather Shoes",
+              "price": "$89.00",
+              "image": "https://media.istockphoto.com/id/2176392519/photo/natural-cosmetic-products-in-the-bathroom-on-white-background.jpg?s=1024x1024&w=is&k=20&c=UflE_DQDZpBVZaa9439y5T27KW_aj9aevW2QTHP4If0="
+            },
+            {
+              "id": 3,
+              "name": "Stylish Hat",
+              "price": "$18.00",
+              "image": "https://cdn.pixabay.com/photo/2017/07/28/16/30/bee-pollen-2549125_1280.jpg"
+            },
+            {
+              "id": 3,
+              "name": "Stylish Hat",
+              "price": "$18.00",
+              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+            }
+          ],
+          "className": "py-16 px-4"
+        }
+      },
+
+
+
+      {
+        "block": "ProductList",
+        "child": {
+          "block": "ProductCard",
+          "className": "border rounded-lg p-4 hover:shadow-lg transition text-green-500"
+        },
+        "props": {
+          "title": "VIRAL Products",
+          "columns": 2,
+          "products": [
+            {
+              "id": 1,
+              "name": "Classic Tee",
+              "price": "$25.00",
+              "image": "https://media.istockphoto.com/id/2185993729/photo/advertising-concepts-of-skin-care-cosmetics-with-cream-in-jar-serum-and-moisturizer.jpg?s=1024x1024&w=is&k=20&c=1wt7RsuX0juqTPBxd7dp0p-n5EPtRPhdGNUBUrsX1k0="
+            },
+            {
+              "id": 2,
+              "name": "Leather Shoes",
+              "price": "$89.00",
+              "image": "https://media.istockphoto.com/id/2176392519/photo/natural-cosmetic-products-in-the-bathroom-on-white-background.jpg?s=1024x1024&w=is&k=20&c=UflE_DQDZpBVZaa9439y5T27KW_aj9aevW2QTHP4If0="
+            },
+            {
+              "id": 3,
+              "name": "Stylish Hat",
+              "price": "$18.00",
+              "image": "https://cdn.pixabay.com/photo/2017/07/28/16/30/bee-pollen-2549125_1280.jpg"
+            },
+            {
+              "id": 3,
+              "name": "Stylish Hat",
+              "price": "$18.00",
+              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+            }
+          ],
+          "className": "py-16 px-4"
+        }
+      },
+
       {
         "block": "TextBlock",
         "props": {
