@@ -11,7 +11,7 @@ interface ProductListProps {
 }
 
 interface Child {
-    block: string;
+    block?: string;
     className?: string;
 }
 
@@ -20,7 +20,7 @@ interface ProductListBlockProps {
     products?: Product[];
     columns?: number;
     className?: string;
-    child?: Child; // Optional child block configuration
+    child?: Child | Record<string, any>; // Optional child block configuration
 }
 
 export const ProductList: React.FC<ProductListBlockProps> = ({
@@ -38,7 +38,7 @@ export const ProductList: React.FC<ProductListBlockProps> = ({
         5: 'grid-cols-5'
     }[columns] || 'grid-cols-4';
 
-    const CardComponent = child?.block ? BlockRegistry[child.block] : null;
+    const CardComponent = child?.block && BlockRegistry[child.block as keyof typeof BlockRegistry] ? BlockRegistry[child.block as keyof typeof BlockRegistry] : null;
 
     return (
         <section className={className}>
@@ -53,7 +53,7 @@ export const ProductList: React.FC<ProductListBlockProps> = ({
                             <CardComponent
                                 key={key}
                                 product={product}
-                                child = {child}
+                                child={child as any}
                             />
                         ) : (
                             <div key={key}>⚠️ Invalid card block</div>

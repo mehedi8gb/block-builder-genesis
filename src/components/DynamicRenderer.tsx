@@ -28,11 +28,16 @@ export function DynamicRenderer({ blocks, className = "" }: DynamicRendererProps
           );
         }
 
+        const props = {
+          ...block.props,
+          ...(block.child ? { child: block.child } : {})
+        };
+        
         return (
             <BlockComponent
                 key={block.id || index}
-                {...block.props}
-                {...(block.child ? { child: block.child } : {})}></BlockComponent>
+                {...(props as any)} 
+            />
         );
       })}
     </div>
