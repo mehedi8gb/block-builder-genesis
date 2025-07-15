@@ -6,9 +6,13 @@ interface DynamicRendererProps {
     blocks: Block[];
     className?: string;
     params?: Record<string, string>;
+    // Optional data for Zustand-powered components
+    data?: {
+        [key: string]: any; // for future extensibility (like user, cart, etc.)
+    };
 }
 
-export function DynamicRenderer({blocks, className = "", params}: DynamicRendererProps) {
+export function DynamicRenderer({blocks, className = "", params, data}: DynamicRendererProps) {
     if (!blocks || blocks.length === 0) {
         return null;
     }
@@ -17,7 +21,6 @@ export function DynamicRenderer({blocks, className = "", params}: DynamicRendere
         <div className={className}>
             {blocks.map((block, index) => {
                 const BlockComponent : React.ComponentType<any> = getBlockComponent(block.block);
-                console.log(block);
 
                 if (!BlockComponent) {
                     return (
@@ -34,6 +37,7 @@ export function DynamicRenderer({blocks, className = "", params}: DynamicRendere
                         key={block.id || index}
                         props={block.props}
                         params={params}
+                        data={data}
                     ></BlockComponent>
                 );
             })}

@@ -1,18 +1,19 @@
+"use client";
 // app/product/[slug]/page.tsx
 
-import { ThemeProvider } from '@/contexts/ThemeContext';
-import { PageRenderer } from '@/components/PageRenderer';
+import {ThemeProvider} from '@/contexts/ThemeContext';
+import {PageRenderer} from '@/components/PageRenderer';
+import {useProductStore} from "@/stores/useProductStore";
+import {useParams} from "next/navigation";
 
-interface ProductPageProps {
-    params: { slug: string };
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
-    const { slug } = params;
+export default function ProductPage() {
+    const params = useParams();
+    const slug = params.slug as string;
+    const product = useProductStore((state) => state.getBySlug(slug));
 
     return (
         <ThemeProvider defaultTheme="default">
-            <PageRenderer page="product" params={{ slug }} />
+            <PageRenderer page="product" params={{slug}} data={{product}}/>
         </ThemeProvider>
     );
 }

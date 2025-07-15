@@ -8,9 +8,13 @@ interface PageRendererProps {
     page: PageKey;
     className?: string;
     params?: Record<string, string>;
+    // Optional Zustand-powered data injected manually
+    data?: {
+        [key: string]: any;   // for future extensibility (like user, cart, etc.)
+    };
 }
 
-export function PageRenderer({page, className = "", params}: PageRendererProps) {
+export function PageRenderer({page, className = "", params, data}: PageRendererProps) {
     const {theme} = useTheme();
 
     const pageBlocks = theme?.layout[page] || [];
@@ -24,7 +28,7 @@ export function PageRenderer({page, className = "", params}: PageRendererProps) 
                 )}
 
                 {/* Render page content */}
-                <DynamicRenderer blocks={pageBlocks} params={params}/>
+                <DynamicRenderer blocks={pageBlocks} params={params} data={data}/>
 
                 {/* Render footer if defined */}
                 {theme?.layout.footer && (

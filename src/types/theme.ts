@@ -16,13 +16,6 @@ export const LayoutSchema = z.object({
   contact: z.array(BlockSchema).optional().default([]),
   privacy: z.array(BlockSchema).optional().default([]),
   product: z.array(BlockSchema).optional().default([]),
-  'client-dashboard': z.array(BlockSchema).optional().default([]),
-  'admin-dashboard': z.array(BlockSchema).optional().default([]),
-  'admin-users': z.array(BlockSchema).optional().default([]),
-  'admin-themes': z.array(BlockSchema).optional().default([]),
-  'admin-analytics': z.array(BlockSchema).optional().default([]),
-  'client-profile': z.array(BlockSchema).optional().default([]),
-  'client-settings': z.array(BlockSchema).optional().default([]),
   footer: z.array(BlockSchema).optional().default([]),
   header: z.array(BlockSchema).optional().default([]),
 });
