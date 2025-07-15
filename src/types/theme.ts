@@ -4,7 +4,6 @@ import { z } from 'zod';
 // Block schema - represents a component with its props
 export const BlockSchema = z.object({
   block: z.string(),
-  child: z.record(z.any()).optional().default({}),
   props: z.record(z.any()).optional().default({}),
   id: z.string().optional(),
   className: z.string().optional(),
@@ -70,3 +69,64 @@ export type Layout = z.infer<typeof LayoutSchema>;
 export type GlobalTokens = z.infer<typeof GlobalSchema>;
 export type Theme = z.infer<typeof ThemeSchema>;
 export type PageKey = keyof Layout;
+
+
+export interface Product {
+  id: number | string;
+  name: string;
+  price: string;
+  slug: string;
+  image?: string;
+  specs?: { label: string; value: string }[]
+
+}
+
+export interface ProductCardProps {
+  products: Product[];
+  child: {
+    block: string;
+    className?: string;
+    wrapperClass?: string;
+    imageClass?: string;
+    titleClass?: string;
+    priceClass?: string;
+  }
+}
+
+export interface CategoryGridProps {
+  props: {
+    categories?: string[];
+    columns?: number;
+    className?: string;
+  }
+}
+
+
+export interface ProductListBlockProps {
+  props: {
+    title?: string;
+    products?: Product[];
+    columns?: number;
+    className?: string;
+    child?: {
+      block: string;
+      className?: string;
+      wrapperClass?: string;
+      imageClass?: string;
+      titleClass?: string;
+      priceClass?: string;
+    }
+  }
+}
+
+export interface ProductCardBlockProps {
+  products: Product[];
+  child: {
+    block: string;
+    className?: string;
+    wrapperClass?: string;
+    imageClass?: string;
+    titleClass?: string;
+    priceClass?: string;
+  }
+}

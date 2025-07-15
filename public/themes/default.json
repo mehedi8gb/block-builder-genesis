@@ -1,19 +1,28 @@
-
 {
   "name": "Default Theme",
   "version": "1.0.0",
   "layout": {
     "header": [
       {
-        "block": "FooterLinks",
+        "block": "Header",
         "props": {
-          "links": [
-            { "title": "Home", "url": "/" },
-            { "title": "About", "url": "/about" },
-            { "title": "Contact", "url": "/contact" },
-            { "title": "Privacy Policy", "url": "/privacy" }
+          "logo": "https://yourdomain.com/logo.png",
+          "title": "Your Site Title",
+          "nav": [
+            {
+              "title": "Home",
+              "url": "/"
+            },
+            {
+              "title": "About",
+              "url": "/about"
+            },
+            {
+              "title": "Contact",
+              "url": "/contact"
+            }
           ],
-          "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."
+          "className": "custom-header-class"
         }
       }
     ],
@@ -21,7 +30,7 @@
       {
         "block": "Hero",
         "props": {
-          "title": "Welcome to Our Platform DADA",
+          "title": "Welcome to Our Platform",
           "subtitle": "Experience the power of dynamic theming",
           "buttonText": "Get Started"
         }
@@ -29,91 +38,27 @@
       {
         "block": "CategoryGrid",
         "props": {
-          "categories": ["Technology", "Design", "Development", "Marketing"],
-          "columns": 2
+          "categories": [
+            "Technology",
+            "Design",
+            "Development",
+            "Marketing"
+          ],
+          "columns": 4
         }
       },
-
       {
         "block": "ProductList",
-        "child": {
-          "block": "ProductCard",
-          "className": "border rounded-lg p-4 hover:shadow-lg transition"
-        },
         "props": {
+          "child": {
+            "block": "ProductCard",
+            "className": "border rounded-lg p-4 hover:shadow-lg transition"
+          },
           "title": "Featured Products",
           "columns": 4,
-          "products": [
-            {
-              "id": 1,
-              "name": "Classic Tee",
-              "price": "$25.00",
-              "image": "https://media.istockphoto.com/id/2185993729/photo/advertising-concepts-of-skin-care-cosmetics-with-cream-in-jar-serum-and-moisturizer.jpg?s=1024x1024&w=is&k=20&c=1wt7RsuX0juqTPBxd7dp0p-n5EPtRPhdGNUBUrsX1k0="
-            },
-            {
-              "id": 2,
-              "name": "Leather Shoes",
-              "price": "$89.00",
-              "image": "https://media.istockphoto.com/id/2176392519/photo/natural-cosmetic-products-in-the-bathroom-on-white-background.jpg?s=1024x1024&w=is&k=20&c=UflE_DQDZpBVZaa9439y5T27KW_aj9aevW2QTHP4If0="
-            },
-            {
-              "id": 3,
-              "name": "Stylish Hat",
-              "price": "$18.00",
-              "image": "https://cdn.pixabay.com/photo/2017/07/28/16/30/bee-pollen-2549125_1280.jpg"
-            },
-            {
-              "id": 3,
-              "name": "Stylish Hat",
-              "price": "$18.00",
-              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
-            }
-          ],
           "className": "py-16 px-4"
         }
       },
-
-
-
-      {
-        "block": "ProductList",
-        "child": {
-          "block": "ProductCard",
-          "className": "border rounded-lg p-4 hover:shadow-lg transition text-green-500"
-        },
-        "props": {
-          "title": "VIRAL Products",
-          "columns": 2,
-          "products": [
-            {
-              "id": 1,
-              "name": "Classic Tee",
-              "price": "$25.00",
-              "image": "https://media.istockphoto.com/id/2185993729/photo/advertising-concepts-of-skin-care-cosmetics-with-cream-in-jar-serum-and-moisturizer.jpg?s=1024x1024&w=is&k=20&c=1wt7RsuX0juqTPBxd7dp0p-n5EPtRPhdGNUBUrsX1k0="
-            },
-            {
-              "id": 2,
-              "name": "Leather Shoes",
-              "price": "$89.00",
-              "image": "https://media.istockphoto.com/id/2176392519/photo/natural-cosmetic-products-in-the-bathroom-on-white-background.jpg?s=1024x1024&w=is&k=20&c=UflE_DQDZpBVZaa9439y5T27KW_aj9aevW2QTHP4If0="
-            },
-            {
-              "id": 3,
-              "name": "Stylish Hat",
-              "price": "$18.00",
-              "image": "https://cdn.pixabay.com/photo/2017/07/28/16/30/bee-pollen-2549125_1280.jpg"
-            },
-            {
-              "id": 3,
-              "name": "Stylish Hat",
-              "price": "$18.00",
-              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
-            }
-          ],
-          "className": "py-16 px-4"
-        }
-      },
-
       {
         "block": "TextBlock",
         "props": {
@@ -121,6 +66,39 @@
           "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
           "align": "center",
           "className": "text-lg text-gray-700 bg-gray-100 p-4 rounded-lg shadow-md"
+        }
+      }
+    ],
+    "product": [
+      {
+        "block": "ProductDetails",
+        "props": {
+        }
+      },
+      {
+        "block": "ProductSpecs",
+        "props": {
+
+        }
+      },
+      {
+        "block": "RelatedProducts",
+        "props": {
+          "title": "You may also like",
+          "products": [
+            {
+              "id": 101,
+              "name": "Classic Tee",
+              "price": "$18.00",
+              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+            },
+            {
+              "id": 102,
+              "name": "Leather Wallet",
+              "price": "$42.00",
+              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+            }
+          ]
         }
       }
     ],
@@ -207,10 +185,29 @@
         "props": {
           "title": "Your Account Overview",
           "stats": [
-            { "label": "Active Projects", "value": "12", "change": "+2", "trend": "up" },
-            { "label": "Total Views", "value": "1,234", "change": "+15%", "trend": "up" },
-            { "label": "Storage Used", "value": "2.4 GB", "change": "0.2 GB", "trend": "up" },
-            { "label": "Plan Status", "value": "Pro", "trend": "neutral" }
+            {
+              "label": "Active Projects",
+              "value": "12",
+              "change": "+2",
+              "trend": "up"
+            },
+            {
+              "label": "Total Views",
+              "value": "1,234",
+              "change": "+15%",
+              "trend": "up"
+            },
+            {
+              "label": "Storage Used",
+              "value": "2.4 GB",
+              "change": "0.2 GB",
+              "trend": "up"
+            },
+            {
+              "label": "Plan Status",
+              "value": "Pro",
+              "trend": "neutral"
+            }
           ]
         }
       },
@@ -270,10 +267,30 @@
         "props": {
           "title": "System Overview",
           "stats": [
-            { "label": "Total Users", "value": "2,456", "change": "+12%", "trend": "up" },
-            { "label": "Active Themes", "value": "18", "change": "+3", "trend": "up" },
-            { "label": "System Load", "value": "67%", "change": "-5%", "trend": "down" },
-            { "label": "Storage", "value": "1.2 TB", "change": "+0.1 TB", "trend": "up" }
+            {
+              "label": "Total Users",
+              "value": "2,456",
+              "change": "+12%",
+              "trend": "up"
+            },
+            {
+              "label": "Active Themes",
+              "value": "18",
+              "change": "+3",
+              "trend": "up"
+            },
+            {
+              "label": "System Load",
+              "value": "67%",
+              "change": "-5%",
+              "trend": "down"
+            },
+            {
+              "label": "Storage",
+              "value": "1.2 TB",
+              "change": "+0.1 TB",
+              "trend": "up"
+            }
           ]
         }
       },
@@ -298,15 +315,43 @@
         "block": "DataTable",
         "props": {
           "title": "All Users",
-          "headers": ["Name", "Email", "Role", "Status", "Created"],
+          "headers": [
+            "Name",
+            "Email",
+            "Role",
+            "Status",
+            "Created"
+          ],
           "rows": [
-            { "name": "John Doe", "email": "john@example.com", "role": "Client", "status": "Active", "created": "2024-01-15" },
-            { "name": "Jane Smith", "email": "jane@example.com", "role": "Admin", "status": "Active", "created": "2024-01-10" },
-            { "name": "Bob Wilson", "email": "bob@example.com", "role": "Client", "status": "Inactive", "created": "2024-01-20" }
+            {
+              "name": "John Doe",
+              "email": "john@example.com",
+              "role": "Client",
+              "status": "Active",
+              "created": "2024-01-15"
+            },
+            {
+              "name": "Jane Smith",
+              "email": "jane@example.com",
+              "role": "Admin",
+              "status": "Active",
+              "created": "2024-01-10"
+            },
+            {
+              "name": "Bob Wilson",
+              "email": "bob@example.com",
+              "role": "Client",
+              "status": "Inactive",
+              "created": "2024-01-20"
+            }
           ],
           "actions": [
-            { "label": "Edit" },
-            { "label": "Delete" }
+            {
+              "label": "Edit"
+            },
+            {
+              "label": "Delete"
+            }
           ]
         }
       }
@@ -323,16 +368,46 @@
         "block": "DataTable",
         "props": {
           "title": "Available Themes",
-          "headers": ["Name", "Version", "Status", "Created", "Author"],
+          "headers": [
+            "Name",
+            "Version",
+            "Status",
+            "Created",
+            "Author"
+          ],
           "rows": [
-            { "name": "Default Theme", "version": "1.0.0", "status": "Active", "created": "2024-01-01", "author": "Platform Team" },
-            { "name": "E-commerce Theme", "version": "1.1.0", "status": "Active", "created": "2024-01-05", "author": "Design Team" },
-            { "name": "Dark Theme", "version": "0.9.0", "status": "Draft", "created": "2024-01-15", "author": "UI Team" }
+            {
+              "name": "Default Theme",
+              "version": "1.0.0",
+              "status": "Active",
+              "created": "2024-01-01",
+              "author": "Platform Team"
+            },
+            {
+              "name": "E-commerce Theme",
+              "version": "1.1.0",
+              "status": "Active",
+              "created": "2024-01-05",
+              "author": "Design Team"
+            },
+            {
+              "name": "Dark Theme",
+              "version": "0.9.0",
+              "status": "Draft",
+              "created": "2024-01-15",
+              "author": "UI Team"
+            }
           ],
           "actions": [
-            { "label": "Edit" },
-            { "label": "Clone" },
-            { "label": "Delete" }
+            {
+              "label": "Edit"
+            },
+            {
+              "label": "Clone"
+            },
+            {
+              "label": "Delete"
+            }
           ]
         }
       }
@@ -350,10 +425,30 @@
         "props": {
           "title": "Platform Analytics",
           "stats": [
-            { "label": "Page Views", "value": "45,238", "change": "+18%", "trend": "up" },
-            { "label": "Unique Visitors", "value": "8,432", "change": "+12%", "trend": "up" },
-            { "label": "Bounce Rate", "value": "32%", "change": "-5%", "trend": "down" },
-            { "label": "Avg Session", "value": "4m 32s", "change": "+15s", "trend": "up" }
+            {
+              "label": "Page Views",
+              "value": "45,238",
+              "change": "+18%",
+              "trend": "up"
+            },
+            {
+              "label": "Unique Visitors",
+              "value": "8,432",
+              "change": "+12%",
+              "trend": "up"
+            },
+            {
+              "label": "Bounce Rate",
+              "value": "32%",
+              "change": "-5%",
+              "trend": "down"
+            },
+            {
+              "label": "Avg Session",
+              "value": "4m 32s",
+              "change": "+15s",
+              "trend": "up"
+            }
           ]
         }
       },
@@ -371,12 +466,30 @@
         "block": "FooterLinks",
         "props": {
           "links": [
-            { "title": "Home", "url": "/" },
-            { "title": "About", "url": "/about" },
-            { "title": "Contact", "url": "/contact" },
-            { "title": "Privacy Policy", "url": "/privacy" },
-            { "title": "Client Portal", "url": "/client/dashboard" },
-            { "title": "Admin Portal", "url": "/admin/dashboard" }
+            {
+              "title": "Home",
+              "url": "/"
+            },
+            {
+              "title": "About",
+              "url": "/about"
+            },
+            {
+              "title": "Contact",
+              "url": "/contact"
+            },
+            {
+              "title": "Privacy Policy",
+              "url": "/privacy"
+            },
+            {
+              "title": "Client Portal",
+              "url": "/client/dashboard"
+            },
+            {
+              "title": "Admin Portal",
+              "url": "/admin/dashboard"
+            }
           ],
           "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."
         }

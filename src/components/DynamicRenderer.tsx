@@ -5,9 +5,10 @@ import {getBlockComponent} from '@/lib/BlockRegistry';
 interface DynamicRendererProps {
     blocks: Block[];
     className?: string;
+    params?: Record<string, string>;
 }
 
-export function DynamicRenderer({blocks, className = ""}: DynamicRendererProps) {
+export function DynamicRenderer({blocks, className = "", params}: DynamicRendererProps) {
     if (!blocks || blocks.length === 0) {
         return null;
     }
@@ -15,7 +16,8 @@ export function DynamicRenderer({blocks, className = ""}: DynamicRendererProps) 
     return (
         <div className={className}>
             {blocks.map((block, index) => {
-                const BlockComponent = getBlockComponent(block.block);
+                const BlockComponent : React.ComponentType<any> = getBlockComponent(block.block);
+                console.log(block);
 
                 if (!BlockComponent) {
                     return (
@@ -30,8 +32,9 @@ export function DynamicRenderer({blocks, className = ""}: DynamicRendererProps) 
                 return (
                     <BlockComponent
                         key={block.id || index}
-                        {...block.props}
-                        {...(block.child ? {child: block.child} : {})}></BlockComponent>
+                        props={block.props}
+                        params={params}
+                    ></BlockComponent>
                 );
             })}
         </div>
