@@ -12,7 +12,7 @@ module.exports = {
       watch: false, // Set true only if you're watching local file changes
       env: {
         NODE_ENV: 'production',
-        PORT: 6000,
+        PORT: 6666,
         MONGODB_URI: 'mongodb+srv://mm_mehedi:9hchHyiS7.6JS6H@tms-experiment.hvwuyfv.mongodb.net/?retryWrites=true&w=majority'
       },
       error_file: './logs/err.log',
