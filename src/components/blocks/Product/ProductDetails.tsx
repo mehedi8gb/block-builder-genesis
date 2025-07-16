@@ -9,14 +9,12 @@ interface ProductDetailsProps {
         description: string;
         image?: string;
     },
-    data?: {
-        product: Product;
-    }
+    data: Product
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({props, data}) => {
 
-    const product = data?.product
+    const product = data
 
     return (
         <section className="max-w-6xl mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-2 gap-8">

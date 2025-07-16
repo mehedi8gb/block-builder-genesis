@@ -17,8 +17,8 @@ A testing environment for a Next.js-based platform that supports full dynamic th
 src/
 ├── components/
 │   ├── blocks/           # Individual theme-able components
-│   │   ├── Hero.tsx
-│   │   ├── CategoryGrid.tsx
+│   │   ├── Hero_V2.tsx
+│   │   ├── CategoryGrid_V1.tsx
 │   │   ├── FooterLinks.tsx
 │   │   └── TextBlock.tsx
 │   ├── DynamicRenderer.tsx   # Renders blocks from theme config
@@ -44,7 +44,7 @@ public/themes/               # Local theme storage
   "layout": {
     "home": [
       { 
-        "block": "Hero", 
+        "block": "Hero_V2", 
         "props": { "title": "Welcome" } 
       }
     ]
@@ -99,9 +99,9 @@ npm run dev
   "layout": {
     "home": [
       {
-        "block": "Hero",
+        "block": "Hero_V2",
         "props": {
-          "title": "Custom Hero Title",
+          "title": "Custom Hero_V2 Title",
           "subtitle": "Custom subtitle"
         }
       }

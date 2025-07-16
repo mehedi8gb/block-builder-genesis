@@ -13,7 +13,7 @@ export default function ProductPage() {
 
     return (
         <ThemeProvider defaultTheme="default">
-            <PageRenderer page="product" params={{slug}} data={{product}}/>
+            <PageRenderer page="product" data={product}/>
         </ThemeProvider>
     );
 }

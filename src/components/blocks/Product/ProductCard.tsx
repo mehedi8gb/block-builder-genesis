@@ -5,14 +5,7 @@ import {ProductCardProps} from "@/types/theme";
 
 export const ProductCard: React.FC<ProductCardProps> = ({
                                                             products,
-                                                            child = {
-                                                                block: "ProductCard",
-                                                                className: "",
-                                                                wrapperClass: "",
-                                                                imageClass: "",
-                                                                titleClass: "",
-                                                                priceClass: "",
-                                                            },
+                                                            child
                                                         }) => {
     return (
         <>

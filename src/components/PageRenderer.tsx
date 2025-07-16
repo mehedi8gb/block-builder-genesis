@@ -16,7 +16,6 @@ interface PageRendererProps {
 
 export function PageRenderer({page, className = "", params, data}: PageRendererProps) {
     const {theme} = useTheme();
-
     const pageBlocks = theme?.layout[page] || [];
 
     return (

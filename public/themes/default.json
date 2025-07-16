@@ -1,13 +1,15 @@
 {
+  "_id":{"$oid":"6877e8d40c50ad8cacab442a"},
   "name": "Default Theme",
+  "active": true,
   "version": "1.0.0",
   "layout": {
     "header": [
       {
-        "block": "Header",
+        "block": "Header_V1",
         "props": {
-          "logo": "https://yourdomain.com/logo.png",
-          "title": "Your Site Title",
+          "logo": "https://tratechbd.com/Uploads/logo.png",
+          "title": "TmsSolution",
           "nav": [
             {
               "title": "Home",
@@ -20,6 +22,10 @@
             {
               "title": "Contact",
               "url": "/contact"
+            },
+            {
+              "title": "Privacy",
+              "url": "/privacy"
             }
           ],
           "className": "custom-header-class"
@@ -28,22 +34,16 @@
     ],
     "home": [
       {
-        "block": "Hero",
+        "block": "Hero_V2",
         "props": {
           "title": "Welcome to Our Platform",
           "subtitle": "Experience the power of dynamic theming",
-          "buttonText": "Get Started"
+          "buttonText": "Get Started Now"
         }
       },
       {
-        "block": "CategoryGrid",
+        "block": "CategoryGrid_V2",
         "props": {
-          "categories": [
-            "Technology",
-            "Design",
-            "Development",
-            "Marketing"
-          ],
           "columns": 4
         }
       },
@@ -62,10 +62,25 @@
       {
         "block": "TextBlock",
         "props": {
+          "heading": "Here is our cartegoires",
+          "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
+          "align": "center",
+          "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
+        }
+      },
+      {
+        "block": "CategoryGrid_V4",
+        "props": {
+          "columns": 2
+        }
+      },
+      {
+        "block": "TextBlock",
+        "props": {
           "heading": "About Our Platform",
           "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
           "align": "center",
-          "className": "text-lg text-gray-700 bg-gray-100 p-4 rounded-lg shadow-md"
+          "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
         }
       }
     ],
@@ -104,7 +119,7 @@
     ],
     "about": [
       {
-        "block": "Hero",
+        "block": "Hero_V1",
         "props": {
           "title": "About Our Platform",
           "subtitle": "Building the future of dynamic web applications",
@@ -130,7 +145,7 @@
     ],
     "contact": [
       {
-        "block": "Hero",
+        "block": "Hero_V1",
         "props": {
           "title": "Get in Touch",
           "subtitle": "We'd love to hear from you",
@@ -148,7 +163,7 @@
     ],
     "privacy": [
       {
-        "block": "Hero",
+        "block": "Hero_V1",
         "props": {
           "title": "Privacy Policy",
           "subtitle": "Your privacy is important to us",

@@ -10,7 +10,7 @@ interface HeroProps {
     }
 }
 
-export const Hero: React.FC<HeroProps> = ({
+export const Hero_V1: React.FC<HeroProps> = ({
                                               props: {
                                                   title = "Welcome",
                                                   subtitle = "Discover amazing products",

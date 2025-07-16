@@ -1,5 +1,6 @@
 
 import { z } from 'zod';
+import React from "react";
 
 // Block schema - represents a component with its props
 export const BlockSchema = z.object({
@@ -121,5 +122,25 @@ export interface ProductCardBlockProps {
     imageClass?: string;
     titleClass?: string;
     priceClass?: string;
+  }
+}
+
+
+export interface Category {
+  id: number | string;
+  name: string;
+  slug: string;
+  image?: string;
+}
+
+
+
+export interface HeaderProps {
+  props: {
+    logo?: string;
+    title?: string;
+    nav?: { title: string; url: string }[];
+    children?: React.ReactNode;
+    className?: string;
   }
 }
