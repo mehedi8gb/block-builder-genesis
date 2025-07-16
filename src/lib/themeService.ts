@@ -1,5 +1,6 @@
 // lib/themeService.ts
 import clientPromise from "./mongodb";
+import {Theme} from "@/types/theme"
 
 export async function getActiveTheme() {
   const client = await clientPromise;
@@ -8,11 +9,13 @@ export async function getActiveTheme() {
 
   if (!themeFromDb) return null;
 
-  // convert _id from ObjectId to string
-  const theme = {
-    ...themeFromDb,
-    _id: themeFromDb._id.toString(),
-  };
+const theme: Theme = {
+  ...themeFromDb,
+  _id: themeFromDb._id.toString(),
+};
+
+
+  console.log("from theme service", theme.name)
 
   return theme;
 }

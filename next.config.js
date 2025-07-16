@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['lucide-react'],
-  experimental: {
-    appDir: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 

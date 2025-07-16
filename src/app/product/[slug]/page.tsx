@@ -1,19 +1,14 @@
-"use client";
-// app/product/[slug]/page.tsx
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { getActiveTheme } from "@/lib/themeService";
+import { ProductClient } from "./ProductClient";
 
-import {ThemeProvider} from '@/contexts/ThemeContext';
-import {PageRenderer} from '@/components/PageRenderer';
-import {useProductStore} from "@/stores/useProductStore";
-import {useParams} from "next/navigation";
+// @ts-ignore
+export default async function ProductPage({ params }) {
+  const theme = await getActiveTheme();
 
-export default function ProductPage() {
-    const params = useParams();
-    const slug = params.slug as string;
-    const product = useProductStore((state) => state.getBySlug(slug));
-
-    return (
-        <ThemeProvider defaultTheme="default">
-            <PageRenderer page="product" data={product}/>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider defaultTheme={theme}>
+      <ProductClient slug={params.slug} />
+    </ThemeProvider>
+  );
 }

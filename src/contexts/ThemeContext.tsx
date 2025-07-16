@@ -65,14 +65,14 @@ export function ThemeProvider({ children, defaultTheme }: ThemeProviderProps) {
 
       // For now, load from local themes directory
       // Later this could be from API: `/api/themes/${themeName}`
-      const response = await fetch(`/themes/${themeName}.json`);
+      // const response = await fetch(`/themes/${themeName}.json`);
 
       // if (!response.ok) {
       //   throw new Error(`Failed to load theme: ${response.statusText}`);
       // }
 
-      const themeData = await response.json();
-      // const themeData = defaultTheme;
+      // const themeData = await response.json();
+      const themeData = defaultTheme;
 
       // Validate theme schema
       const validatedTheme = ThemeSchema.parse(themeData);
