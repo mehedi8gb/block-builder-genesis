@@ -1,29 +1,34 @@
-// lib/mongodb.ts
-import { MongoClient } from 'mongodb';
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+dotenv.config(); // make sure env is loaded
 
-const uri = process.env.MONGODB_URI!;
-const options = {};
+const uri = process.env.MONGODB_URI;
 
-let client: MongoClient;
+if (!uri) {
+  throw new Error("Please define the MONGODB_URI in .env.local");
+}
+
+const options = {
+  tls: true,
+  tlsAllowInvalidCertificates: false, // for production: false, for dev: can try true if error persists
+};
+
+let client;
 let clientPromise: Promise<MongoClient>;
 
-if (!process.env.MONGODB_URI) {
-    throw new Error('Please define the MONGODB_URI in .env.local');
-}
-
 declare global {
-    var _mongoClientPromise: Promise<MongoClient>;
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
-if (process.env.NODE_ENV === 'development') {
-    if (!global._mongoClientPromise) {
-        client = new MongoClient(uri, options);
-        global._mongoClientPromise = client.connect();
-    }
-    clientPromise = global._mongoClientPromise;
-} else {
+if (process.env.NODE_ENV === "development") {
+  if (!global._mongoClientPromise) {
     client = new MongoClient(uri, options);
-    clientPromise = client.connect();
+    global._mongoClientPromise = client.connect();
+  }
+  clientPromise = global._mongoClientPromise;
+} else {
+  client = new MongoClient(uri, options);
+  clientPromise = client.connect();
 }
 
 export default clientPromise;

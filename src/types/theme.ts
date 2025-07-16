@@ -46,7 +46,9 @@ export const GlobalSchema = z.object({
 
 // Complete theme schema
 export const ThemeSchema = z.object({
+  _id: z.string(),
   name: z.string(),
+  active: z.boolean(),
   version: z.string().optional().default("1.0.0"),
   layout: LayoutSchema,
   global: GlobalSchema,

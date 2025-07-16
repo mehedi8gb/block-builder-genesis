@@ -1,5 +1,5 @@
 {
-  "_id":{"$oid":"6877e8d40c50ad8cacab442a"},
+  "_id":"6877e8d40c50ad8cacab442a",
   "name": "Default Theme",
   "active": true,
   "version": "1.0.0",

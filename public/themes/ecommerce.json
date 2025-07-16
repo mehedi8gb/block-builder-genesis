@@ -1,5 +1,5 @@
 {
-  "_id":{"$oid":"6877e95f0c50ad8cacab442b"},
+  "_id":"6877e95f0c50ad8cacab442b",
   "name": "E-commerce Theme",
   "active": false,
   "version": "1.0.0",
@@ -34,7 +34,7 @@
     ],
     "home": [
       {
-        "block": "Hero",
+        "block": "Hero_V1",
         "props": {
           "title": "Shop the Latest Trends",
           "subtitle": "Discover amazing products at unbeatable prices",

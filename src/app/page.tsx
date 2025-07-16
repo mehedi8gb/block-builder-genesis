@@ -1,15 +1,16 @@
 // app/page.tsx
-import { ThemeProvider } from '@/contexts/ThemeContext';
-import { PageRenderer } from '@/components/PageRenderer';
-import { getActiveTheme } from '@/lib/themeService';
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { PageRenderer } from "@/components/PageRenderer";
+import { getActiveTheme } from "@/lib/themeService";
 
 export default async function HomePage() {
-    const theme = await getActiveTheme() || 'default';
+  const theme = await getActiveTheme();
 
-    return (
-        <ThemeProvider {...({ theme } as any)}>
-            <PageRenderer page="home" />
-        </ThemeProvider>
+  const result = (
+    <ThemeProvider defaultTheme={theme}>
+      <PageRenderer page="home" />
+    </ThemeProvider>
+  );
 
-    );
+  return result;
 }
