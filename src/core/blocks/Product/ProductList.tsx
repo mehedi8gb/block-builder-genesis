@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import {BlockRegistry} from '@/lib/BlockRegistry';
 import {ProductListBlockProps} from "@/types/theme";
 import { useProductStore } from '@/stores/useProductStore';
+import {BlockComponentFactory} from "@/core/registry/BlockComponentFactory";
 
 export const ProductList: React.FC<ProductListBlockProps> = ({ props }) => {
 
@@ -15,7 +15,7 @@ export const ProductList: React.FC<ProductListBlockProps> = ({ props }) => {
 
     const products = useProductStore((state) => state.getAllProducts());
 
-    const CardComponent: React.ComponentType<any> = BlockRegistry[props?.child?.block as keyof typeof BlockRegistry]
+    const CardComponent: React.ComponentType<any> = BlockComponentFactory.resolve(props?.child?.block)
 
     return (
         <section className={props.className}>

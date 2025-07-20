@@ -1,19 +1,23 @@
 // app/page.tsx
 export const dynamic = "force-dynamic";
 
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { PageRenderer } from "@/components/PageRenderer";
-import { getActiveTheme } from "@/lib/themeService";
+import {PageRenderer} from "@/core/renderers/PageRenderer";
+import {getActiveTheme} from "@/core/lib/themeService"; // Ensures all blocks are registered before rendering
+import {ThemeProvider} from "@/contexts/ThemeContext";
+import "@/core/registry";
+
 
 export default async function HomePage() {
-  const theme = await getActiveTheme();
-  console.log("from index page", theme.name)
+    console.time("rendering time");
 
-  const result = (
-    <ThemeProvider defaultTheme={theme}>
-      <PageRenderer page="home" />
-    </ThemeProvider>
-  );
+    const theme = await getActiveTheme();
 
-  return result;
+    const result = (
+        <ThemeProvider defaultTheme={theme}>
+            <PageRenderer page="home"/>
+        </ThemeProvider>
+    );
+
+    console.timeEnd("rendering time");
+    return result;
 }

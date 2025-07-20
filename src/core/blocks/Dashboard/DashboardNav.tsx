@@ -19,12 +19,12 @@ export function DashboardNav({
   className = "" 
 }: DashboardNavProps) {
   const defaultLinks = userRole === 'admin' ? [
-    { label: 'Dashboard', href: '/admin/dashboard', active: false },
+    { label: 'Dashboard', href: '/admin/Dashboard', active: false },
     { label: 'Users', href: '/admin/users', active: false },
     { label: 'Themes', href: '/admin/themes', active: false },
     { label: 'Analytics', href: '/admin/analytics', active: false },
   ] : [
-    { label: 'Dashboard', href: '/client/dashboard', active: false },
+    { label: 'Dashboard', href: '/client/Dashboard', active: false },
     { label: 'Profile', href: '/client/profile', active: false },
     { label: 'Settings', href: '/client/settings', active: false },
   ];
@@ -52,7 +52,7 @@ export function DashboardNav({
         </div>
         <div className="flex items-center space-x-4">
           <span className="text-sm text-muted-foreground capitalize">{userRole} Portal</span>
-          <Link href="/" className="text-sm text-primary hover:underline">
+          <Link href="/public" className="text-sm text-primary hover:underline">
             Back to Site
           </Link>
         </div>

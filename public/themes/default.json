@@ -48,7 +48,7 @@
         }
       },
       {
-        "block": "ProductList",
+        "block": "ProductList_V2",
         "props": {
           "child": {
             "block": "ProductCard",
