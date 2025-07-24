@@ -1,6 +1,6 @@
 import React from 'react';
-import { CategoryGridProps } from '@/types/theme';
-import {useCategoryStore} from "@/stores/useCategoryStore";
+import { CategoryGridProps } from '@/core/types/theme';
+import {useCategoryStore} from "@/core/stores/useCategoryStore";
 
 export const CategoryGrid_V3: React.FC<CategoryGridProps> = ({
                                                                  props

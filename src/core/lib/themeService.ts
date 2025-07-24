@@ -1,6 +1,6 @@
 // lib/themeService.ts
-import clientPromise from "../../lib/mongodb";
-import {Theme} from "@/types/theme";
+import clientPromise from "./mongodb";
+import {Theme} from "@/core/types/theme";
 
 
 export async function getActiveTheme() {

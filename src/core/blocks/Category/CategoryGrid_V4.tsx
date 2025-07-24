@@ -1,7 +1,7 @@
 import React from 'react';
-import { CategoryGridProps } from '@/types/theme';
+import { CategoryGridProps } from '@/core/types/theme';
 import { ShoppingBag, Tag, Gift } from 'lucide-react';
-import {useCategoryStore} from "@/stores/useCategoryStore";
+import {useCategoryStore} from "@/core/stores/useCategoryStore";
 
 const icons = [ShoppingBag, Tag, Gift];
 

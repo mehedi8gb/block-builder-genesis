@@ -1,8 +1,8 @@
 // src/stores/useCategoryStore.ts
 
 import { create } from 'zustand';
-import { Category } from '@/types/theme';
-import { categoryList } from '@/data/categories';
+import { Category } from '@/core/types/theme';
+import { categoryList } from '@/core/data/categories';
 
 interface CategoryStore {
     categories: Category[];

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import {ProductCardProps} from "@/types/theme";
+import {ProductCardProps} from "@/core/types/theme";
 
 export const ProductCard: React.FC<ProductCardProps> = ({
                                                             products,

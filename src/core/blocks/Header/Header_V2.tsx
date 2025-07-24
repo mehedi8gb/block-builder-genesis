@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { HeaderProps } from "@/types/theme";
+import { HeaderProps } from "@/core/types/theme";
 
 export const Header_V2: React.FC<HeaderProps> = ({ props }) => {
     return (

@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { Theme, ThemeSchema } from "@/types/theme";
+import { Theme, ThemeSchema } from "@/core/types/theme";
 
 interface ThemeContextValue {
   theme: Theme | null;
@@ -65,14 +65,14 @@ export function ThemeProvider({ children, defaultTheme }: ThemeProviderProps) {
 
       // For now, load from local themes directory
       // Later this could be from API: `/api/themes/${themeName}`
-      // const response = await fetch(`/themes/${themeName}.json`);
+      const response = await fetch(`/themes/${themeName}.json`);
 
       // if (!response.ok) {
       //   throw new Error(`Failed to load theme: ${response.statusText}`);
       // }
 
-      // const themeData = await response.json();
-      const themeData = defaultTheme;
+      const themeData = await response.json();
+      // const themeData = defaultTheme;
 
       // Validate theme schema
       const validatedTheme = ThemeSchema.parse(themeData);
@@ -105,6 +105,15 @@ export function ThemeProvider({ children, defaultTheme }: ThemeProviderProps) {
 
   useEffect(() => {
     console.time("⏱ Theme load time");
+
+    // Server-side only
+    if (process.env.NEXT_PUBLIC_ENV === 'development') {
+      require('@/core/registry'); // Uncompiled dev registration
+      console.log('Block registration complete', process.env.NEXT_PUBLIC_ENV);
+    } else {
+      require('@/core/registry/block-registration'); // Auto-generated
+      console.log('Block registration complete', process.env.NEXT_PUBLIC_ENV);
+    }
 
     if (defaultTheme?.name) {
       loadTheme(defaultTheme?.name);

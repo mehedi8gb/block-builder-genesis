@@ -1,6 +1,6 @@
 // src/data/categories.ts
 
-import { Category } from "@/types/theme";
+import { Category } from "@/core/types/theme";
 
 export const categoryList: Category[] = [
     {

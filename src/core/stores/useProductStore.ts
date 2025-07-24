@@ -1,8 +1,8 @@
 // src/stores/useProductStore.ts
 
 import {create} from 'zustand';
-import {Product} from '@/types/theme';
-import {productList} from '@/data/products';
+import {Product} from '@/core/types/theme';
+import {productList} from '@/core/data/products';
 
 interface ProductStore {
     products: Product[];

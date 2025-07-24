@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import {Product} from "@/types/theme";
+import {Product} from "@/core/types/theme";
 
 interface ProductDetailsProps {
     props: {

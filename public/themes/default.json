@@ -48,7 +48,7 @@
         }
       },
       {
-        "block": "ProductList_V2",
+        "block": "ProductList",
         "props": {
           "child": {
             "block": "ProductCard",
@@ -60,12 +60,12 @@
         }
       },
       {
-        "block": "TextBlock",
+        "block": "TextBlock_V2",
         "props": {
           "heading": "Here is our cartegoires",
           "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
           "align": "center",
-          "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
+          "variant": "muted"
         }
       },
       {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block } from '@/types/theme';
+import { Block } from '@/core/types/theme';
 import { BlockComponentFactory } from '../registry/BlockComponentFactory';
 
 interface Props {

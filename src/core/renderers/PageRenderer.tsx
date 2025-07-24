@@ -1,8 +1,8 @@
 'use client';
-import React, { Suspense } from 'react';
-import { useTheme } from '@/contexts/ThemeContext';
-import { DynamicRenderer } from './DynamicRenderer';
-import { PageKey } from '@/types/theme';
+import React, {Suspense} from 'react';
+import {useTheme} from '@/contexts/ThemeContext';
+import {DynamicRenderer} from './DynamicRenderer';
+import {PageKey} from '@/core/types/theme';
 
 interface Props {
     page?: PageKey;
@@ -19,15 +19,15 @@ export const PageRenderer: React.FC<Props> = ({
                                                   data,
                                                   fallback = <div>Loading...</div>
                                               }) => {
-    const { theme } = useTheme();
+    const {theme} = useTheme();
     const blocks = theme?.layout[page] ?? [];
 
     return (
         <main className={className}>
             <Suspense fallback={fallback}>
-                {theme?.layout.header && <DynamicRenderer blocks={theme.layout.header} />}
-                <DynamicRenderer blocks={blocks} params={params} data={data} />
-                {theme?.layout.footer && <DynamicRenderer blocks={theme.layout.footer} />}
+                <DynamicRenderer blocks={theme?.layout.header}/>
+                <DynamicRenderer blocks={blocks} params={params} data={data}/>
+                <DynamicRenderer blocks={theme?.layout.footer}/>
             </Suspense>
         </main>
     );

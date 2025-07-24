@@ -1,6 +1,6 @@
 // src/data/products.ts
 
-import {Product} from "@/types/theme";
+import {Product} from "@/core/types/theme";
 
 export const productList: Product[] = [
     {

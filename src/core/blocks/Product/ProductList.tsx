@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import {ProductListBlockProps} from "@/types/theme";
-import { useProductStore } from '@/stores/useProductStore';
+import {ProductListBlockProps} from "@/core/types/theme";
+import { useProductStore } from '@/core/stores/useProductStore';
 import {BlockComponentFactory} from "@/core/registry/BlockComponentFactory";
 
 export const ProductList: React.FC<ProductListBlockProps> = ({ props }) => {

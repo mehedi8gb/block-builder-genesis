@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlockRenderer } from './BlockRenderer';
-import { Block } from '@/types/theme';
+import { Block } from '@/core/types/theme';
 
 interface Props {
     blocks: Block[];
