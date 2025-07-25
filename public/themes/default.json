@@ -207,14 +207,6 @@
             {
               "title": "Privacy Policy",
               "url": "/privacy"
-            },
-            {
-              "title": "Client Portal",
-              "url": "/client/dashboard"
-            },
-            {
-              "title": "Admin Portal",
-              "url": "/admin/dashboard"
             }
           ],
           "copyright": "© 2025 Dynamic Theme Platform. All rights reserved."

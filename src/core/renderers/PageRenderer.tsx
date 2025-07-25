@@ -25,9 +25,7 @@ export const PageRenderer: React.FC<Props> = ({
     return (
         <main className={className}>
             <Suspense fallback={fallback}>
-                <DynamicRenderer blocks={theme?.layout.header}/>
                 <DynamicRenderer blocks={blocks} params={params} data={data}/>
-                <DynamicRenderer blocks={theme?.layout.footer}/>
             </Suspense>
         </main>
     );
