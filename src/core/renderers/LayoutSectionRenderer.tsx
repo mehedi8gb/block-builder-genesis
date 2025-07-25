@@ -22,7 +22,6 @@ export const LayoutSectionRenderer: React.FC<Props> = ({ section, className = ''
     return (
         <div className={className}>
                 <BlockRenderer
-                    key={block[0].id || 1}
                     block={block[0]}
                     index={1}
                     params={params}
