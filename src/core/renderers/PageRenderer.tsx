@@ -20,7 +20,7 @@ export const PageRenderer: React.FC<Props> = ({
                                                   fallback = <div>Loading...</div>
                                               }) => {
     const {theme} = useTheme();
-    const blocks = theme?.layout[page] ?? [];
+    const blocks = theme?.layout?.pages[page];
 
     return (
         <main className={className}>

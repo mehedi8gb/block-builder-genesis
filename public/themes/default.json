@@ -32,161 +32,163 @@
         }
       }
     ],
-    "home": [
-      {
-        "block": "Hero_V2",
-        "props": {
-          "title": "Welcome to Our Platform",
-          "subtitle": "Experience the power of dynamic theming",
-          "buttonText": "Get Started Now"
-        }
-      },
-      {
-        "block": "CategoryGrid_V2",
-        "props": {
-          "columns": 4
-        }
-      },
-      {
-        "block": "ProductList",
-        "props": {
-          "child": {
-            "block": "ProductCard",
-            "className": "border rounded-lg p-4 hover:shadow-lg transition"
-          },
-          "title": "Featured Products",
-          "columns": 4,
-          "className": "py-16 px-4"
-        }
-      },
-      {
-        "block": "TextBlock_V2",
-        "props": {
-          "heading": "Here is our cartegoires",
-          "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
-          "align": "center",
-          "variant": "muted"
-        }
-      },
-      {
-        "block": "CategoryGrid_V4",
-        "props": {
-          "columns": 2
-        }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "About Our Platform",
-          "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
-          "align": "center",
-          "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
-        }
-      }
-    ],
-    "product": [
-      {
-        "block": "ProductDetails",
-        "props": {
-        }
-      },
-      {
-        "block": "ProductSpecs",
-        "props": {
-
-        }
-      },
-      {
-        "block": "RelatedProducts",
-        "props": {
-          "title": "You may also like",
-          "products": [
-            {
-              "id": 101,
-              "name": "Classic Tee",
-              "price": "$18.00",
-              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+    "pages": {
+      "home": [
+        {
+          "block": "Hero_V2",
+          "props": {
+            "title": "Welcome to Our Platform",
+            "subtitle": "Experience the power of dynamic theming",
+            "buttonText": "Get Started Now"
+          }
+        },
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "columns": 4
+          }
+        },
+        {
+          "block": "ProductList",
+          "props": {
+            "child": {
+              "block": "ProductCard",
+              "className": "border rounded-lg p-4 hover:shadow-lg transition"
             },
-            {
-              "id": 102,
-              "name": "Leather Wallet",
-              "price": "$42.00",
-              "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
-            }
-          ]
+            "title": "Featured Products",
+            "columns": 4,
+            "className": "py-16 px-4"
+          }
+        },
+        {
+          "block": "TextBlock_V2",
+          "props": {
+            "heading": "Here is our cartegoires",
+            "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
+            "align": "center",
+            "variant": "muted"
+          }
+        },
+        {
+          "block": "CategoryGrid_V4",
+          "props": {
+            "columns": 2
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "About Our Platform",
+            "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
+            "align": "center",
+            "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
+          }
         }
-      }
-    ],
-    "about": [
-      {
-        "block": "Hero_V1",
-        "props": {
-          "title": "About Our Platform",
-          "subtitle": "Building the future of dynamic web applications",
-          "buttonText": "Learn More"
+      ],
+      "product": [
+        {
+          "block": "ProductDetails",
+          "props": {
+          }
+        },
+        {
+          "block": "ProductSpecs",
+          "props": {
+
+          }
+        },
+        {
+          "block": "RelatedProducts",
+          "props": {
+            "title": "You may also like",
+            "products": [
+              {
+                "id": 101,
+                "name": "Classic Tee",
+                "price": "$18.00",
+                "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+              },
+              {
+                "id": 102,
+                "name": "Leather Wallet",
+                "price": "$42.00",
+                "image": "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+              }
+            ]
+          }
         }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "Our Mission",
-          "content": "We are dedicated to creating flexible, scalable web applications that can be fully customized through dynamic theming systems.",
-          "align": "left"
+      ],
+      "about": [
+        {
+          "block": "Hero_V1",
+          "props": {
+            "title": "About Our Platform",
+            "subtitle": "Building the future of dynamic web applications",
+            "buttonText": "Learn More"
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "Our Mission",
+            "content": "We are dedicated to creating flexible, scalable web applications that can be fully customized through dynamic theming systems.",
+            "align": "left"
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "Technology Stack",
+            "content": "Built with Next.js, TypeScript, Tailwind CSS, and a custom theme engine that allows complete control over layout and styling.",
+            "align": "left"
+          }
         }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "Technology Stack",
-          "content": "Built with Next.js, TypeScript, Tailwind CSS, and a custom theme engine that allows complete control over layout and styling.",
-          "align": "left"
+      ],
+      "contact": [
+        {
+          "block": "Hero_V1",
+          "props": {
+            "title": "Get in Touch",
+            "subtitle": "We'd love to hear from you",
+            "buttonText": "Send Message"
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "Contact Information",
+            "content": "Feel free to reach out to us for any questions about our dynamic theming platform or to discuss potential collaborations.",
+            "align": "center"
+          }
         }
-      }
-    ],
-    "contact": [
-      {
-        "block": "Hero_V1",
-        "props": {
-          "title": "Get in Touch",
-          "subtitle": "We'd love to hear from you",
-          "buttonText": "Send Message"
+      ],
+      "privacy": [
+        {
+          "block": "Hero_V1",
+          "props": {
+            "title": "Privacy Policy",
+            "subtitle": "Your privacy is important to us",
+            "buttonText": "Learn More"
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "Privacy Policy",
+            "content": "This is a test application for demonstrating dynamic theming capabilities. No personal data is collected or stored.",
+            "align": "left"
+          }
+        },
+        {
+          "block": "TextBlock",
+          "props": {
+            "heading": "Data Usage",
+            "content": "This platform is designed for testing purposes only. All themes and configurations are stored locally and not transmitted to external servers.",
+            "align": "left"
+          }
         }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "Contact Information",
-          "content": "Feel free to reach out to us for any questions about our dynamic theming platform or to discuss potential collaborations.",
-          "align": "center"
-        }
-      }
-    ],
-    "privacy": [
-      {
-        "block": "Hero_V1",
-        "props": {
-          "title": "Privacy Policy",
-          "subtitle": "Your privacy is important to us",
-          "buttonText": "Learn More"
-        }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "Privacy Policy",
-          "content": "This is a test application for demonstrating dynamic theming capabilities. No personal data is collected or stored.",
-          "align": "left"
-        }
-      },
-      {
-        "block": "TextBlock",
-        "props": {
-          "heading": "Data Usage",
-          "content": "This platform is designed for testing purposes only. All themes and configurations are stored locally and not transmitted to external servers.",
-          "align": "left"
-        }
-      }
-    ],
+      ]
+    },
     "footer": [
       {
         "block": "FooterLinks",
