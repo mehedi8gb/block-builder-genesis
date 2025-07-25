@@ -1,7 +1,7 @@
 'use client';
 
-import { PageRenderer } from '@/components/PageRenderer';
-import { useProductStore } from '@/stores/useProductStore';
+import { PageRenderer } from '@/core/renderers/PageRenderer';
+import { useProductStore } from '@/core/stores/useProductStore';
 
 interface Props {
   slug: string;
