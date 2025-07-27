@@ -63,7 +63,6 @@ export function ThemeProvider({children, defaultTheme}: ThemeProviderProps) {
         try {
             setError(null);
             let themeData: unknown
-            alert(env)
             if (env === 'development') {
                 // For now, load from local themes directory
                 // Later this could be from API: `/api/themes/${themeName}`
