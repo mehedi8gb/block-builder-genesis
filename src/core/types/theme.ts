@@ -1,6 +1,12 @@
 
 import { z } from 'zod';
 import React from "react";
+import {
+  CardItemVariants,
+  GridContainerVariants,
+  SectionWrapperVariants,
+  TextBlockHeadingVariants
+} from "@/core/variants/designVariants";
 
 // Block schema - represents a component with its props
 export const BlockSchema = z.object({
@@ -88,9 +94,23 @@ export interface ProductCardProps {
 
 export interface CategoryGridProps {
   props: {
+    animate?: CardItemVariants['animate'];
+    rounded?: CardItemVariants['rounded'];
+    shadow?: CardItemVariants['shadow'];
+    align?: SectionWrapperVariants['align'];
+    justify?: GridContainerVariants['justify'];
+    spacing?: GridContainerVariants['spacing'];
+    bgColor?: SectionWrapperVariants['bgColor']
+    gap?: string;
+    title?: string;
+    cardVariant?: string;
     categories?: string[];
-    columns?: number;
+    columns?: 2 | 3 | 4;
     className?: string;
+    variant?: string;
+    headingSize?: TextBlockHeadingVariants['size'];
+    headingColor?: TextBlockHeadingVariants['color'];
+    headingSpacing?: TextBlockHeadingVariants['spacing'];
   }
 }
 

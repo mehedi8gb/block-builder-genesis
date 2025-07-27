@@ -16,7 +16,7 @@ import {ProductDetails} from '@/core/blocks/Product/ProductDetails';
 import {ProductList} from '@/core/blocks/Product/ProductList';
 import {ProductSpecs} from '@/core/blocks/Product/ProductSpecs';
 import {RelatedProducts} from '@/core/blocks/Product/RelatedProducts';
-import {TextBlock} from '@/core/blocks/TextBlock/TextBlock';
+import {TextBlock_V1} from '@/core/blocks/TextBlock/TextBlock_V1';
 import {TextBlock_V2} from '@/core/blocks/TextBlock/TextBlock_V2';
 
 Registry.register('CategoryGrid_V1', CategoryGrid_V1);
@@ -35,5 +35,5 @@ Registry.register('ProductDetails', ProductDetails);
 Registry.register('ProductList', ProductList);
 Registry.register('ProductSpecs', ProductSpecs);
 Registry.register('RelatedProducts', RelatedProducts);
-Registry.register('TextBlock', TextBlock);
+Registry.register('TextBlock_V1', TextBlock_V1);
 Registry.register('TextBlock_V2', TextBlock_V2);

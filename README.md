@@ -20,7 +20,7 @@ src/
 │   │   ├── Hero_V2.tsx
 │   │   ├── CategoryGrid_V1.tsx
 │   │   ├── FooterLinks.tsx
-│   │   └── TextBlock.tsx
+│   │   └── TextBlock_V1.tsx
 │   ├── DynamicRenderer.tsx   # Renders blocks from theme config
 │   └── PageRenderer.tsx      # Complete page rendering
 ├── contexts/

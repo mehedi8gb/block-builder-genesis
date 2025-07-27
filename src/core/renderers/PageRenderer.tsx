@@ -2,10 +2,9 @@
 import React, {Suspense} from 'react';
 import {useTheme} from '@/contexts/ThemeContext';
 import {DynamicRenderer} from './DynamicRenderer';
-import {PageKey} from '@/core/types/theme';
 
 interface Props {
-    page?: PageKey;
+    page?: string;
     className?: string;
     params?: Record<string, string>;
     data?: Record<string, any>;

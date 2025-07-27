@@ -42,12 +42,415 @@
             "buttonText": "Get Started Now"
           }
         },
+
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Welcome to Our Store",
+            "content": "Discover quality and affordability in one place.",
+            "wrapperVariant": {
+              "bgColor": "white",
+              "padding": "lg",
+              "align": "center"
+            },
+            "headingVariant": {
+              "size": "lg",
+              "color": "primary",
+              "spacing": "loose"
+            },
+            "contentVariant": {
+              "size": "md",
+              "color": "muted",
+              "spacing": "normal"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Minimal & Clean",
+            "content": "Less is more — clean layout with soft colors.",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "medium",
+              "textColor": "foreground"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "sm",
+              "bgColor": "background",
+              "rounded": "md",
+              "shadow": "none"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Bold Announcement",
+            "content": "Important updates you should know.",
+            "headingVariant": {
+              "align": "left",
+              "fontWeight": "bold",
+              "textColor": "destructive"
+            },
+            "contentVariant": {
+              "align": "left",
+              "textColor": "foreground"
+            },
+            "wrapperVariant": {
+              "padding": "md",
+              "bgColor": "accent",
+              "rounded": "sm",
+              "shadow": "md"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Dark Mode",
+            "content": "Designed for low-light environments.",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "semibold",
+              "textColor": "white"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "lg",
+              "bgColor": "black",
+              "rounded": "lg",
+              "shadow": "xl"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Glass Effect",
+            "content": "Elegant design with a frosted background.",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "medium",
+              "textColor": "foreground"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "xl",
+              "bgColor": "glass",
+              "rounded": "2xl",
+              "shadow": "glow"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Alert Message",
+            "content": "Please update your profile to continue.",
+            "headingVariant": {
+              "align": "left",
+              "fontWeight": "bold",
+              "textColor": "warning"
+            },
+            "contentVariant": {
+              "align": "left",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "md",
+              "bgColor": "warning-muted",
+              "rounded": "md",
+              "shadow": "sm"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Section Title",
+            "content": "This is a sub-description of the section.",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "medium",
+              "textColor": "foreground"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "sm",
+              "bgColor": "card",
+              "rounded": "lg",
+              "shadow": "none"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Onboarding",
+            "content": "Let’s get you started with the basics.",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "bold",
+              "textColor": "primary"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "lg",
+              "bgColor": "white",
+              "rounded": "full",
+              "shadow": "lg"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Marketing",
+            "content": "Tell your brand’s story with impactful text.",
+            "headingVariant": {
+              "align": "right",
+              "fontWeight": "semibold",
+              "textColor": "accent"
+            },
+            "contentVariant": {
+              "align": "right",
+              "textColor": "muted"
+            },
+            "wrapperVariant": {
+              "padding": "lg",
+              "bgColor": "background",
+              "rounded": "xl",
+              "shadow": "glow"
+            }
+          }
+        },
+        {
+          "block": "TextBlock_V1",
+          "props": {
+            "heading": "Success Message",
+            "content": "Your operation completed successfully!",
+            "headingVariant": {
+              "align": "center",
+              "fontWeight": "bold",
+              "textColor": "success"
+            },
+            "contentVariant": {
+              "align": "center",
+              "textColor": "foreground"
+            },
+            "wrapperVariant": {
+              "padding": "md",
+              "bgColor": "success-muted",
+              "rounded": "lg",
+              "shadow": "md"
+            }
+          }
+        },
         {
           "block": "CategoryGrid_V2",
           "props": {
-            "columns": 4
+            "title": "Explore Our Categories",
+            "columns": 3,
+            "spacing": "xl",
+            "rounded": "full",
+            "shadow": "xl",
+            "animate": "zoom",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-8",
+            "bgColor": "dark",
+            "className": "py-16 px-4"
           }
         },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Clean White Grid with Subtle Shadow",
+            "columns": 3,
+            "spacing": "md",
+            "rounded": "md",
+            "shadow": "sm",
+            "animate": "fade",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-6",
+            "bgColor": "white",
+            "className": "py-12 px-6"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Elegant Dark Mode Grid",
+            "columns": 4,
+            "spacing": "lg",
+            "rounded": "lg",
+            "shadow": "xl",
+            "animate": "flip",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-8",
+            "bgColor": "dark",
+            "className": "py-20 px-6 text-white"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Soft Gray Minimal Layout",
+            "columns": 2,
+            "spacing": "sm",
+            "rounded": "lg",
+            "shadow": "none",
+            "animate": "none",
+            "align": "left",
+            "justify": "start",
+            "gap": "gap-4",
+            "bgColor": "gray",
+            "className": "py-10 px-4"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Full Rounded CTA Grid",
+            "columns": 3,
+            "spacing": "xl",
+            "rounded": "full",
+            "shadow": "xl",
+            "animate": "zoom",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-8",
+            "bgColor": "section",
+            "className": "py-16 px-4"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Feature-Focused Grid with Zoom-In Features",
+            "columns": 3,
+            "spacing": "lg",
+            "rounded": "md",
+            "shadow": "xl",
+            "animate": "zoom",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-10",
+            "bgColor": "white",
+            "className": "py-20"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Left-Aligned Informational Grid Your Category",
+            "columns": 2,
+            "spacing": "md",
+            "rounded": "md",
+            "shadow": "md",
+            "animate": "fade",
+            "align": "left",
+            "justify": "start",
+            "gap": "gap-6",
+            "bgColor": "section",
+            "className": "py-14 px-6"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Light Glassmorphic Style (Low Shadow, Clean) Categories",
+            "columns": 4,
+            "spacing": "lg",
+            "rounded": "lg",
+            "shadow": "sm",
+            "animate": "none",
+            "align": "center",
+            "justify": "between",
+            "gap": "gap-6",
+            "bgColor": "gray",
+            "className": "py-10 px-6"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Clean With High Padding Tags",
+            "columns": 4,
+            "spacing": "xl",
+            "rounded": "sm",
+            "shadow": "none",
+            "animate": "none",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-4",
+            "bgColor": "white",
+            "className": "py-28 px-8"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": " Developer Tools Grid Categories",
+            "columns": 3,
+            "spacing": "md",
+            "rounded": "lg",
+            "shadow": "md",
+            "animate": "flip",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-6",
+            "bgColor": "section",
+            "className": "py-20"
+          }
+        },
+
+        {
+          "block": "CategoryGrid_V2",
+          "props": {
+            "title": "Professional Minimal Grid Solutions",
+            "columns": 3,
+            "spacing": "md",
+            "rounded": "md",
+            "shadow": "sm",
+            "animate": "fade",
+            "align": "center",
+            "justify": "center",
+            "gap": "gap-6",
+            "bgColor": "gray",
+            "className": "py-16 px-5"
+          }
+        },
+
+
         {
           "block": "ProductList",
           "props": {
@@ -61,27 +464,9 @@
           }
         },
         {
-          "block": "TextBlock_V2",
-          "props": {
-            "heading": "Here is our cartegoires",
-            "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
-            "align": "center",
-            "variant": "muted"
-          }
-        },
-        {
           "block": "CategoryGrid_V4",
           "props": {
             "columns": 2
-          }
-        },
-        {
-          "block": "TextBlock",
-          "props": {
-            "heading": "About Our Platform",
-            "content": "This platform demonstrates dynamic theming capabilities where entire page layouts can be controlled through JSON configuration files.",
-            "align": "center",
-            "className": "text-lg text-green-700 bg-gray-800 p-4 rounded-lg shadow-md"
           }
         }
       ],
