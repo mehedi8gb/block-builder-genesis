@@ -1,7 +1,6 @@
 "use client";
 import React, {createContext, useContext, useEffect, useState} from "react";
 import {Theme, ThemeSchema} from "@/core/types/theme";
-import YAML from 'js-yaml';
 
 interface ThemeContextValue {
     theme: Theme | null;
