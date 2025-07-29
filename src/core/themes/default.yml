@@ -1,0 +1,150 @@
+_id: "6877e8d40c50ad8cacab442a"
+name: "default"
+active: true
+version: "1.0.0"
+
+layout:
+  header:
+    - block: Header_V1
+      props:
+        logo: "https://tratechbd.com/Uploads/logo.png"
+        title: "TmsSolution"
+        nav:
+          - { title: "Home", url: "/" }
+          - { title: "Home", url: "/" }
+          - { title: "About", url: "/about" }
+          - { title: "Contact", url: "/contact" }
+          - { title: "Privacy", url: "/privacy" }
+        className: "custom-header-class"
+
+  pages:
+    home:
+      - block: CategoryGrid_V2
+        props:
+            title: "Explore Our Categories"
+            columns: 4                       # available: 1, 2, 3, 4, 5, 6, fit, auto, fill
+            spacing: xl
+            rounded: full                     # available: none, sm, md, lg, xl, full
+            shadow: xl                      # available: none, sm, md, lg, xl
+            animate: bounce                 # available: none, pulse, wiggle, bounce
+            align: center                 # available: left, center, right
+            justify: center           # available: left, center, right
+            gap: gap-8                # available: gap-0, gap-1, gap-2, gap-3, gap-4, gap-5, gap-6, gap-7, gap-8, gap-9, gap-10
+            bgColor: purple              # available: gray, red, yellow, green, blue, indigo, purple, pink
+
+
+
+      - block: ProductList
+        props:
+          child:
+            block: ProductCard
+            className: "border rounded-lg p-4 hover:shadow-lg transition"
+          title: "Featured Products"
+          columns: 4
+          className: "py-16 px-4"
+
+      - block: CategoryGrid_V4
+        props:
+          columns: 2
+
+    product:
+      - block: ProductDetails
+        props: {}
+      - block: ProductSpecs
+        props: {}
+      - block: RelatedProducts
+        props:
+          title: "You may also like"
+          products:
+            - id: 101
+              name: "Classic Tee"
+              price: "$18.00"
+              image: "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+            - id: 102
+              name: "Leather Wallet"
+              price: "$42.00"
+              image: "https://cdn.pixabay.com/photo/2018/05/29/23/18/potato-3440360_1280.jpg"
+
+    about:
+      - block: Hero_V1
+        props:
+          title: "About Our Platform"
+          subtitle: "Building the future of dynamic web applications"
+          buttonText: "Learn More"
+
+      - block: TextBlock
+        props:
+          heading: "Our Mission"
+          content: "We are dedicated to creating flexible, scalable web applications that can be fully customized through dynamic theming systems."
+          align: left
+
+      - block: TextBlock
+        props:
+          heading: "Technology Stack"
+          content: "Built with Next.js, TypeScript, Tailwind CSS, and a custom theme engine that allows complete control over layout and styling."
+          align: left
+
+    contact:
+      - block: Hero_V1
+        props:
+          title: "Get in Touch"
+          subtitle: "We'd love to hear from you"
+          buttonText: "Send Message"
+
+      - block: TextBlock
+        props:
+          heading: "Contact Information"
+          content: "Feel free to reach out to us for any questions about our dynamic theming platform or to discuss potential collaborations."
+          align: center
+
+    privacy:
+      - block: Hero_V1
+        props:
+          title: "Privacy Policy"
+          subtitle: "Your privacy is important to us"
+          buttonText: "Learn More"
+
+      - block: TextBlock
+        props:
+          heading: "Privacy Policy"
+          content: "This is a test application for demonstrating dynamic theming capabilities. No personal data is collected or stored."
+          align: left
+
+      - block: TextBlock
+        props:
+          heading: "Data Usage"
+          content: "This platform is designed for testing purposes only. All themes and configurations are stored locally and not transmitted to external servers."
+          align: left
+
+  footer:
+    - block: FooterLinks
+      props:
+        links:
+          - { title: "Home", url: "/" }
+          - { title: "About", url: "/about" }
+          - { title: "Contact", url: "/contact" }
+          - { title: "Privacy Policy", url: "/privacy" }
+        copyright: "© 2025 Dynamic Theme Platform. All rights reserved."
+
+global:
+  colors:
+    primary: "#2563eb"
+    secondary: "#7c3aed"
+    background: "#ffffff"
+    text: "#1f2937"
+    accent: "#f59e0b"
+  fonts:
+    base: "Inter, sans-serif"
+    heading: "Poppins, sans-serif"
+    mono: "JetBrains Mono, monospace"
+  spacing:
+    xs: "0.5rem"
+    sm: "1rem"
+    md: "1.5rem"
+    lg: "2rem"
+    xl: "3rem"
+
+metadata:
+  description: "Default theme for testing dynamic theming system"
+  author: "Platform Team"
+  created: "2024-07-09"

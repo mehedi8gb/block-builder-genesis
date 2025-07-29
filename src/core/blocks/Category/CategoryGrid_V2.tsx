@@ -14,7 +14,7 @@ export const CategoryGrid_V2: React.FC<CategoryGridProps> = ({props}) => {
     const categories = useCategoryStore((state) => state.getAllCategories());
 
     const {
-        columns = 3,
+        columns = '3',
         spacing = "md",
         rounded = "lg",
         shadow = "md",

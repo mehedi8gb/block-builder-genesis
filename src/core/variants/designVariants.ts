@@ -21,6 +21,9 @@ export const gridContainer = cva("", {
             4: "grid grid-cols-4",
             5: "grid grid-cols-5",
             6: "grid grid-cols-6",
+            auto: "grid grid-cols-auto",
+            fit: "grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))]",
+            fill: "grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]",
         },
         spacing: {
             none: "gap-0",
@@ -30,6 +33,8 @@ export const gridContainer = cva("", {
             lg: "gap-6",
             xl: "gap-8",
             "2xl": "gap-12",
+            "3xl": "gap-16",
+            "fluid": "gap-[clamp(1rem,2vw,3rem)]",
         },
         animate: {
             none: '',
@@ -38,6 +43,8 @@ export const gridContainer = cva("", {
             slideUp: 'transition-transform transform hover:-translate-y-2 duration-500',
             pulse: 'animate-pulse',
             wiggle: 'hover:animate-wiggle',
+            pop: "transition-transform hover:scale-[1.02] duration-300 ease-in-out",
+            subtle: "transition-all duration-200 hover:opacity-80",
         },
         rounded: {
             none: 'rounded-none',
@@ -46,6 +53,9 @@ export const gridContainer = cva("", {
             lg: 'rounded-lg',
             xl: 'rounded-xl',
             full: 'rounded-full',
+            "2xl": "rounded-2xl",
+            "3xl": "rounded-3xl",
+            "pill": "rounded-[999px]",
         },
         justify: {
             start: "justify-start",
@@ -53,11 +63,29 @@ export const gridContainer = cva("", {
             end: "justify-end",
             between: "justify-between",
             around: "justify-around",
+            evenly: "justify-evenly",
         },
         align: {
             left: "text-left",
             center: "text-center",
             right: "text-right",
+            top: "items-start",
+            middle: "items-center",
+            bottom: "items-end",
+        },
+        border: {
+            none: "border-0",
+            thin: "border border-gray-200",
+            thick: "border-4 border-gray-400",
+            dashed: "border border-dashed border-gray-300",
+        },
+        backgroundOpacity: {
+            0: "bg-opacity-0",
+            10: "bg-opacity-10",
+            25: "bg-opacity-25",
+            50: "bg-opacity-50",
+            75: "bg-opacity-75",
+            100: "bg-opacity-100",
         },
     },
     defaultVariants: {
@@ -65,6 +93,8 @@ export const gridContainer = cva("", {
         spacing: "md",
         justify: "start",
         align: "left",
+        border: "none",
+        backgroundOpacity: 100,
     },
 });
 
@@ -94,6 +124,10 @@ export const cardItem = cva("relative cursor-pointer transition", {
             zoom: "transition-transform duration-300 transform hover:scale-105",
             slideUp: "transform transition-transform duration-300 -translate-y-2 hover:translate-y-0",
             slideDown: "transform transition-transform duration-300 translate-y-2 hover:translate-y-0",
+            pulse: 'animate-pulse',
+            wiggle: 'hover:animate-wiggle',
+            pop: "transition-transform hover:scale-[1.02] duration-300 ease-in-out",
+            subtle: "transition-all duration-200 hover:opacity-80",
         },
     },
     defaultVariants: {
@@ -151,6 +185,20 @@ export const sectionWrapper = cva("w-full py-8", {
             white: "bg-white",
             gray: "bg-gray-100",
             dark: "bg-gray-900 text-white",
+            primary: "bg-primary text-white",
+            secondary: "bg-secondary text-white",
+            accent: "bg-accent text-white",
+            transparent: "bg-transparent",
+            gradient: "bg-gradient-to-r from-blue-500 to-purple-500 text-white",
+            indigo: "bg-indigo-500 text-white",
+            purple: "bg-purple-500 text-white",
+            pink: "bg-pink-500 text-white",
+            teal: "bg-teal-500 text-white",
+            orange: "bg-orange-500 text-white",
+            yellow: "bg-yellow-500 text-white",
+            red: "bg-red-500 text-white",
+
+
             none: "",
         },
         padding: {

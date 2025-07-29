@@ -1,6 +1,7 @@
 "use client";
 import React, {createContext, useContext, useEffect, useState} from "react";
 import {Theme, ThemeSchema} from "@/core/types/theme";
+import YAML from 'js-yaml';
 
 interface ThemeContextValue {
     theme: Theme | null;
@@ -62,27 +63,29 @@ export function ThemeProvider({children, defaultTheme}: ThemeProviderProps) {
     const loadTheme = async (themeName: string, env?: string) => {
         try {
             setError(null);
-            let themeData: unknown
+            let themeData: unknown;
+
             if (env === 'development') {
-                // For now, load from local themes directory
-                // Later this could be from API: `/api/themes/${themeName}`
-                const response = await fetch(`/themes/${themeName}.json`);
+                // ✅ Load via server-side API route
+                // const response = await fetch(`/api/themes/${themeName}?t=${Date.now()}`);
+                // if (!response.ok) {
+                //     throw new Error(`Failed to load theme: ${response.statusText}`);
+                // }
 
-                if (!response.ok) {
-                    throw new Error(`Failed to load theme: ${response.statusText}`);
-                }
-
-                themeData = await response.json();
+                // themeData = await response.json();
+                themeData = await import('@/core/utils/themeUtils').then(mod => mod.loadThemeFile(themeName));
             } else {
                 themeData = defaultTheme;
             }
-            // Validate theme schema
+
+            // ✅ Validate using Zod schema
             const validatedTheme = ThemeSchema.parse(themeData);
 
             setThemeState(validatedTheme);
             applyGlobalTokens(validatedTheme);
 
             console.log(`Theme "${themeName}" loaded successfully`);
+
         } catch (err) {
             const errorMessage =
                 err instanceof Error ? err.message : "Unknown error loading theme";
@@ -118,7 +121,7 @@ export function ThemeProvider({children, defaultTheme}: ThemeProviderProps) {
         }
 
         if (defaultTheme?.name) {
-            loadTheme(defaultTheme?.name, process.env.NEXT_PUBLIC_ENV || 'development');
+            loadTheme(process.env.NEXT_PUBLIC_LOCAL_THEME_NAME || defaultTheme?.name, process.env.NEXT_PUBLIC_ENV || 'development');
         }
         console.timeEnd("⏱ Theme load time");
     }, [defaultTheme]);

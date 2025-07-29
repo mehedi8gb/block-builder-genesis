@@ -105,7 +105,7 @@ export interface CategoryGridProps {
     title?: string;
     cardVariant?: string;
     categories?: string[];
-    columns?: 2 | 3 | 4;
+    columns?: GridContainerVariants['columns'];
     className?: string;
     variant?: string;
     headingSize?: TextBlockHeadingVariants['size'];
