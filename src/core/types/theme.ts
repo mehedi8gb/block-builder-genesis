@@ -94,6 +94,7 @@ export interface ProductCardProps {
 
 export interface CategoryGridProps {
   props: {
+    layout?: GridContainerVariants['layout'];
     animate?: CardItemVariants['animate'];
     rounded?: CardItemVariants['rounded'];
     shadow?: CardItemVariants['shadow'];

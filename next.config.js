@@ -6,6 +6,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fabrilife.com',
+        pathname: '/**', // Allow all image paths
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

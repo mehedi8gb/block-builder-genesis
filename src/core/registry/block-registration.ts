@@ -1,9 +1,11 @@
 // AUTO-GENERATED FILE - DO NOT EDIT
 import Registry from '@/core/registry/BlockRegistry';
+import {CategoryCard} from '@/core/blocks/Category/CategoryCard';
 import {CategoryGrid_V1} from '@/core/blocks/Category/CategoryGrid_V1';
 import {CategoryGrid_V2} from '@/core/blocks/Category/CategoryGrid_V2';
 import {CategoryGrid_V3} from '@/core/blocks/Category/CategoryGrid_V3';
 import {CategoryGrid_V4} from '@/core/blocks/Category/CategoryGrid_V4';
+import {CategorySection} from '@/core/blocks/Category/CategorySection';
 import {FooterLinks} from '@/core/blocks/Footer/FooterLinks';
 import {Header_V1} from '@/core/blocks/Header/Header_V1';
 import {Header_V2} from '@/core/blocks/Header/Header_V2';
@@ -16,13 +18,17 @@ import {ProductDetails} from '@/core/blocks/Product/ProductDetails';
 import {ProductList} from '@/core/blocks/Product/ProductList';
 import {ProductSpecs} from '@/core/blocks/Product/ProductSpecs';
 import {RelatedProducts} from '@/core/blocks/Product/RelatedProducts';
+import {Badge} from '@/core/blocks/Sub/Badge';
+import {Card} from '@/core/blocks/Sub/Card';
 import {TextBlock_V1} from '@/core/blocks/TextBlock/TextBlock_V1';
 import {TextBlock_V2} from '@/core/blocks/TextBlock/TextBlock_V2';
 
+Registry.register('CategoryCard', CategoryCard);
 Registry.register('CategoryGrid_V1', CategoryGrid_V1);
 Registry.register('CategoryGrid_V2', CategoryGrid_V2);
 Registry.register('CategoryGrid_V3', CategoryGrid_V3);
 Registry.register('CategoryGrid_V4', CategoryGrid_V4);
+Registry.register('CategorySection', CategorySection);
 Registry.register('FooterLinks', FooterLinks);
 Registry.register('Header_V1', Header_V1);
 Registry.register('Header_V2', Header_V2);
@@ -35,5 +41,7 @@ Registry.register('ProductDetails', ProductDetails);
 Registry.register('ProductList', ProductList);
 Registry.register('ProductSpecs', ProductSpecs);
 Registry.register('RelatedProducts', RelatedProducts);
+Registry.register('Badge', Badge);
+Registry.register('Card', Card);
 Registry.register('TextBlock_V1', TextBlock_V1);
 Registry.register('TextBlock_V2', TextBlock_V2);
