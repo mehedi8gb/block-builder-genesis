@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { cn } from "@/lib/utils"
 import {badgeVariants} from "@/core/variants/designVariants";
 
 function Badge({ props }) {

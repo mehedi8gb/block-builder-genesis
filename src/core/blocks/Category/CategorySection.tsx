@@ -1,6 +1,6 @@
 "use client";
 
-import {cardItem, gridContainer, sectionWrapper, textBlockHeading} from '@/core/variants/designVariants';
+import {gridContainer, sectionWrapper, textBlockHeading} from '@/core/variants/designVariants';
 import {useCategoryStore} from '@/core/stores/useCategoryStore';
 import {BlockComponentFactory} from "@/core/registry/BlockComponentFactory";
 

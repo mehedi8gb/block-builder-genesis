@@ -1,6 +1,5 @@
 import { cardItem, textBlockHeading } from "@/core/variants/designVariants";
 import Link from "next/link";
-import Image from "next/image";
 import {BlockComponentFactory} from "@/core/registry/BlockComponentFactory";
 
 
