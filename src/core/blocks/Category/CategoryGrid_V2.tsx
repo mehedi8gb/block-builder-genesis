@@ -26,7 +26,9 @@ export const CategoryGrid_V2: React.FC<CategoryGridProps> = ({props}) => {
         bgColor = "none",
         headingSize = "lg",
         headingColor = "dark",
-        headingSpacing = "normal"
+        headingSpacing = "normal",
+        size = "text-xl",
+        color = "white",
     } = props;
 
     return (
@@ -66,7 +68,12 @@ export const CategoryGrid_V2: React.FC<CategoryGridProps> = ({props}) => {
                             }}
                         >
                             <div
-                                className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"/>
+                                className={textBlockHeading({
+                                    size,
+                                    color,
+                                    spacing,
+                                    animate})
+                            }/>
                             <div
                                 className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl z-10">
                                 {category.name}
